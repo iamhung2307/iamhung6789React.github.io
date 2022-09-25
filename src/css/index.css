@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.nav {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(230, 229, 229, 0.647);
+  width: 100%;
+}
+.nav a:hover {
+  color: black;
+}
+.nav .dropDownChild a {
+  color: white;
+}
+.nav img {
+  width: 25px;
+}
+.nav .img {
+  display: flex;
+}
+.nav .user1 img:hover {
+  background-color: white;
+  border-radius: 10px;
+  width: 25px;
+}
+.nav .user2 {
+  display: none;
+}
+.nav .user2 li a {
+  display: none;
+}
+.nav .user2 li:hover a {
+  display: block;
+  position: absolute;
+  top: 46px;
+  right: 150px;
+  background-color: rgba(1, 1, 1, 0.666);
+}
+.nav .dropDown .dropDownChild {
+  display: flex;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.666);
+}
+.nav .dropDown .dropDownChild .linkDropDown {
+  margin: 10px;
+  display: grid;
+  width: 45%;
+}
+.nav .dropDown .dropDownChild .imgDropDown {
+  width: 55%;
+}
+.nav .dropDown .dropDownChild .imgDropDown img:nth-child(1) {
+  width: 38%;
+}
+.nav .dropDown .dropDownChild .imgDropDown img:nth-child(2) {
+  width: 38%;
+}
+.nav .dropDown .dropDownChild .imgDropDown img {
+  margin: 1px;
+}
+.nav .dropDown .dropDownChild {
+  display: none;
+}
+.nav .dropDown:hover .dropDownChild {
+  display: flex;
+}
+.nav li {
+  list-style-type: none;
+  padding: 10px;
+}
+.nav li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+.nav ul {
+  display: flex;
+  margin: auto;
+}
+
+.homeProducts {
+  text-align: center;
+  color: rgb(239, 239, 239);
+  width: 100%;
+  margin: auto;
+  color: black;
+}
+.homeProducts .banner {
+  display: none;
+}
+.homeProducts .homeProducts-Women {
+  min-height: 300px;
+  display: flex;
+}
+.homeProducts .homeProducts-Women .left {
+  width: 5%;
+  display: block;
+  margin: auto;
+}
+.homeProducts .homeProducts-Women .right {
+  width: 75%;
+}
+.homeProducts .homeProducts-Men {
+  min-height: 300px;
+  display: flex;
+}
+.homeProducts .homeProducts-Men .left {
+  width: 75%;
+}
+.homeProducts .homeProducts-Men .right {
+  width: 5%;
+  display: block;
+  margin: auto;
+}
+.homeProducts .homeProducts-Accessories {
+  min-height: 300px;
+  display: flex;
+}
+.homeProducts .homeProducts-Accessories .left {
+  width: 5%;
+  display: block;
+  margin: auto;
+}
+.homeProducts .homeProducts-Accessories .right {
+  width: 75%;
+}
+
+.homeMore {
+  width: 100%;
+  margin: auto;
+}
+.homeMore .homeMore1 {
+  background-image: url(../img/products/banner/NFT.webp);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.homeMore .homeMore2 {
+  background-image: url(../img/products/banner/shop7.webp);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.homeMore section {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  color: aliceblue;
+}
+.homeMore section h3 {
+  margin-top: 50px;
+}
+.homeMore section p {
+  padding: 10px 100px;
+}
+.homeMore section video {
+  border-radius: 10px;
+  cursor: pointer;
+  width: 45%;
+}
+.homeMore section .text-white {
+  margin-top: 30px;
+}
+
+.footer {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(3, 3, 3);
+  box-shadow: 1px 1px 5px 1px rgb(15, 15, 15);
+}
+.footer .left {
+  width: 20%;
+}
+.footer .left video {
+  border-radius: 10px;
+}
+.footer .right {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.bgLogin {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to right, rgb(3, 186, 180), rgba(38, 199, 105, 0.881));
+}
+
+.login {
+  position: absolute;
+  top: 200px;
+  left: 20%;
+  border-radius: 10px;
+  width: 60%;
+  display: flex;
+  background-color: rgba(144, 138, 138, 0.341);
+  box-shadow: 1px 1px 20px 0 rgba(28, 28, 28, 0.512);
+}
+.login a {
+  text-decoration: none;
+  color: black;
+}
+.login a:hover {
+  color: white;
+}
+.login .detailLogin,
+.login .detailSignUp {
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+}
+.login .detailLogin h3,
+.login .detailSignUp h3 {
+  text-align: center;
+  height: 40px;
+}
+.login .detailLogin input,
+.login .detailSignUp input {
+  width: 60%;
+  margin: 20px 20%;
+  padding: 10px 15px;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid;
+  background-color: rgba(90, 92, 92, 0);
+  color: rgb(255, 255, 255);
+}
+.login .detailLogin button,
+.login .detailSignUp button {
+  border: 0;
+  outline: none;
+  width: 50%;
+  margin: 20px 25%;
+  padding: 10px;
+  border-radius: 10px;
+}/*# sourceMappingURL=index.css.map */
