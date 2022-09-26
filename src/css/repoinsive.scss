@@ -1,0 +1,122 @@
+//mobile
+@media (max-width : 1024px){
+    .bgNav{
+        display: none;
+        width:40%;
+        height:100vh;
+        position: fixed;
+        z-index: 10;
+        background-color: rgba(145, 151, 149, 0.347);
+    }
+    .nav{
+        a:hover{
+            color:white;
+        }
+        &.active{
+            height: 100vh;
+            width:60%;
+            display: block;
+            margin-left: 40%;
+            background-color: rgb(88, 83, 83);
+        }
+        .imgMenu{
+            display: block;
+            cursor: pointer; 
+        }
+        ul:nth-child(3),
+        .img,
+        .imgDropDown{
+            display: none;
+        }
+        .dropDown:hover{
+            
+            .linkDropDown{
+                display: none;
+            }
+        }
+        .imgAdd{
+            cursor: pointer;
+            float: left;
+            width: 15px;
+            margin-top: 5px;
+        }
+        .imgMenuClear{
+            display: none;
+            cursor: pointer;
+            width:20px;
+            position: absolute;
+            top:12px;
+            right:20px;
+        }
+    }
+    .homeProducts{
+        // display: none;
+        .homeProducts-Women,
+        .homeProducts-Accessories{
+            .left{
+                width:30px;
+                margin-left: 20px;
+            }
+            .right{
+                margin-left: 30px;
+                width:95%;
+            }
+        }
+        .homeProducts-Men{
+            .right{
+                width:30px;
+            }
+        }
+    }
+    .allProducts{
+        display: grid;
+        
+        grid-template-columns: 1fr 1fr 1fr;
+        margin:3px auto;
+        .product{
+            height: 10%;
+
+        }
+    }
+    .clickOnTop{
+        display: none;
+    }
+    .banner{
+        height:130px;
+    }
+}
+@media (max-width:740px){
+    .homeProducts{
+        .homeProducts-Women,
+        .homeProducts-Accessories{
+            .left{
+                display: none;
+            }
+            
+        }
+        .homeProducts-Men{
+            .right{
+                display: none;
+            }
+            .left{
+                width:100%
+            }
+        }
+    }
+    .allProducts{
+        display: grid;
+        
+        grid-template-columns: 1fr 1fr ;
+        margin:3px auto;
+        .product{
+        
+            width:100%
+        }
+    }
+    .homeMore{
+        video{
+            display:none;
+        }
+    }
+
+}

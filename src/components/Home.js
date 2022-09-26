@@ -8,7 +8,7 @@ import Accessories from './Accessories';
 
 
 function Home(){
-
+    
     return (
         <>
         {/* <Navbar /> */}
@@ -17,6 +17,7 @@ function Home(){
                 <source src={video}/>
             </video>
         </div>
+       
         <div className='homeProducts'>
             <div className='homeProducts-Women'>
                 <div className='left'>

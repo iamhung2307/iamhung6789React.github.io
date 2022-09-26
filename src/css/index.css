@@ -17,6 +17,9 @@ code {
   background-color: rgba(230, 229, 229, 0.647);
   width: 100%;
 }
+.nav .imgMenu, .nav .imgMenuClear {
+  display: none;
+}
 .nav a:hover {
   color: black;
 }

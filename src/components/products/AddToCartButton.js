@@ -8,7 +8,7 @@ function AddToCartButton({products}) {
             addToCartClick.style.display = 'none'
         },3000)
         const json = JSON.stringify(products)
-        localStorage.setItem('product',json)
+        localStorage.setItem(products.id,json)
     }
     
     return (

@@ -8,6 +8,9 @@ import imgTiktok from '../img/icon/tiktok.png'
 import imgZalo from '../img/icon/zalo.png'
 import imgFb from '../img/icon/facebook.png'
 import imgInstagram from '../img/icon/instagram.png'
+
+import { Link } from 'react-router-dom'
+
 function Contact(){
     return (
         <div className="contactForm">
@@ -20,10 +23,10 @@ function Contact(){
                         <p><img src={imgAddress}></img>ADDRESS</p>
                     </div>
                     <div className='leftContentBot'>
-                        <img src={imgTiktok}></img>
-                        <img src={imgFb}></img>
-                        <img src={imgZalo}></img>
-                        <img src={imgInstagram}></img>
+                        <Link to=''><img src={imgTiktok}></img></Link>
+                        <Link to=''><img src={imgFb}></img></Link>
+                        <Link to=''><img src={imgZalo}></img></Link>
+                        <Link to=''><img src={imgInstagram}></img></Link> 
                     </div>
                 </div>
                 <div className="rightContent">

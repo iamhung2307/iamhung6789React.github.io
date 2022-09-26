@@ -13,6 +13,9 @@ code {
 }
 
 .nav{
+  .imgMenu,.imgMenuClear{
+    display: none;
+  }
   text-align: center ;
   position:fixed;
   top:0;

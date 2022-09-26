@@ -18,7 +18,7 @@ function ClickOnTop(){
         <>
             
             {moveOnTop && ( 
-                <a href='/'
+                <a className='clickOnTop' href='/'
                     style={{
                         position:'fixed',
                         bottom:'20px',
