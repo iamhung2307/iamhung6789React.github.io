@@ -119,6 +119,9 @@ code {
 .homeProducts .sliderTop .top span:hover {
   opacity: 1;
 }
+.homeProducts .sliderTop .top .women {
+  opacity: 1;
+}
 .homeProducts .sliderTop .sliderProductMen,
 .homeProducts .sliderTop .sliderProductAccessories {
   display: none;

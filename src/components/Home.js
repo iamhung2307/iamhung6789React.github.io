@@ -28,6 +28,7 @@ function Home(){
         document.querySelector('.sliderProductWomen').style.display = 'none'
         document.querySelector('.sliderProductAccessories').style.display = 'none'
         document.querySelector('.sliderProductMen').style.display = 'flex'
+        document.querySelector('.sliderProductMen').style.opacity = 1
     };
     function handleWomen(){
         // alert('women')
@@ -59,7 +60,7 @@ function Home(){
                 <div className='top'>
                     <span onClick={handleMen}>Men</span>
                     <p> - </p>
-                    <span onClick={handleWomen}>Women</span>
+                    <span className='women' onClick={handleWomen}>Women</span>
                     <p> - </p>
                     <span onClick={handleAccessories}> Accessories </span>
                 </div>

@@ -147,21 +147,18 @@ code {
         }
         
       }
+      .women{
+        opacity: 1;
+      }
+      
     }
-  
+    
     .sliderProductMen,
     .sliderProductAccessories{
       display: none;
     }
-    // .active{
-    //   span{
-    //     opacity: 1;
-    //   }
-    //   display: flex;
-    // }
+
   }
-  
-  
 }
 .homeMore{
   width:100%;
