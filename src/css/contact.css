@@ -26,7 +26,7 @@
   margin: 13px 15px;
 }
 .contactForm .contactContent .leftContent .leftContentTop img {
-  width: 25px;
+  width: 20px;
   margin-right: 10px;
 }
 .contactForm .contactContent .leftContent .leftContentBot {
@@ -37,8 +37,9 @@
 .contactForm .contactContent .leftContent .leftContentBot img {
   width: 35px;
   border-radius: 10px;
+  margin: auto;
+  margin-left: 20px;
   margin-top: 230px;
-  margin-left: 15px;
   box-shadow: 1px 1px 5px 1px rgba(122, 117, 117, 0.75);
 }
 .contactForm .contactContent .rightContent {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Banner from "../banner";
 import axios from "axios";
 import {Product} from "./Product";
+// import Cart from "../cart/Cart";
 export function AllProducts() {
   const [products, setProducts] = useState([]);
 
@@ -26,6 +27,7 @@ export function AllProducts() {
       <div className="allProducts">
       {products.map((product) => (
         <Product product={product} />
+        
       ))}
       </div>
     </>

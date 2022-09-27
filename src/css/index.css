@@ -106,41 +106,22 @@ code {
 .homeProducts .banner {
   display: none;
 }
-.homeProducts .homeProducts-Women {
-  min-height: 300px;
+.homeProducts .sliderTop .top {
   display: flex;
+  font-weight: 500;
+  justify-content: center;
 }
-.homeProducts .homeProducts-Women .left {
-  width: 5%;
-  display: block;
-  margin: auto;
+.homeProducts .sliderTop .top span {
+  cursor: pointer;
+  margin: 0 5px;
+  opacity: 0.6;
 }
-.homeProducts .homeProducts-Women .right {
-  width: 75%;
+.homeProducts .sliderTop .top span:hover {
+  opacity: 1;
 }
-.homeProducts .homeProducts-Men {
-  min-height: 300px;
-  display: flex;
-}
-.homeProducts .homeProducts-Men .left {
-  width: 75%;
-}
-.homeProducts .homeProducts-Men .right {
-  width: 5%;
-  display: block;
-  margin: auto;
-}
-.homeProducts .homeProducts-Accessories {
-  min-height: 300px;
-  display: flex;
-}
-.homeProducts .homeProducts-Accessories .left {
-  width: 5%;
-  display: block;
-  margin: auto;
-}
-.homeProducts .homeProducts-Accessories .right {
-  width: 75%;
+.homeProducts .sliderTop .sliderProductMen,
+.homeProducts .sliderTop .sliderProductAccessories {
+  display: none;
 }
 
 .homeMore {

@@ -8,7 +8,43 @@ import Accessories from './Accessories';
 
 
 function Home(){
-    
+    // function handle(){
+    //     const content = document.querySelector('.sliderTop .content')
+    //     // for(let i=0;i< 3;i++){
+    //         console.log(content)
+    //     // }
+    // }
+    // handle()
+    // (sliderProduct => (
+    //     // sliderProduct.addEventListener ('click',function(){
+    //     //     alert(this)
+    //     // })
+    //     console.log(sliderProduct)
+    // ))
+    function handleMen(){
+        // alert('men')
+        // document.querySelector('.content div').style.display = 'none'
+        
+        document.querySelector('.sliderProductWomen').style.display = 'none'
+        document.querySelector('.sliderProductAccessories').style.display = 'none'
+        document.querySelector('.sliderProductMen').style.display = 'flex'
+    };
+    function handleWomen(){
+        // alert('women')
+        // document.querySelector('.content div').style.display = 'none'
+        
+        document.querySelector('.sliderProductMen').style.display = 'none'
+        document.querySelector('.sliderProductAccessories').style.display = 'none'
+        document.querySelector('.sliderProductWomen').style.display = 'flex'
+    };
+    function handleAccessories(){
+        // alert('acc')
+        // document.querySelector('.content div').style.display = 'none'
+       
+        document.querySelector('.sliderProductMen').style.display = 'none'
+        document.querySelector('.sliderProductWomen').style.display = 'none'
+        document.querySelector('.sliderProductAccessories').style.display = 'flex'
+    };
     return (
         <>
         {/* <Navbar /> */}
@@ -19,12 +55,18 @@ function Home(){
         </div>
        
         <div className='homeProducts'>
-            <div className='homeProducts-Women'>
-                <div className='left'>
-                    <h5>WOMEN</h5>
+            <div className='sliderTop'>
+                <div className='top'>
+                    <span onClick={handleMen}>Men</span>
+                    <p> - </p>
+                    <span onClick={handleWomen}>Women</span>
+                    <p> - </p>
+                    <span onClick={handleAccessories}> Accessories </span>
                 </div>
-                <div className='right'>
-                    <Women />
+                <div className='content'>
+                    <div className='sliderProductMen'>< Men /></div>
+                    <div className='sliderProductWomen'>< Women /></div>
+                    <div className='sliderProductAccessories'>< Accessories /></div>
                 </div>
             </div>
             <div className='homeMore'>
@@ -41,14 +83,7 @@ function Home(){
                     </section>
                 </div>
             </div>
-            <div className='homeProducts-Men'>
-                <div className='left'>
-                    <Men />
-                </div>
-                <div className='right'>
-                    <h5>MEN</h5>
-                </div>
-            </div>
+            
             <div className='homeMore'>
             <div className='homeMore2'>
                 <section>
@@ -63,17 +98,9 @@ function Home(){
                 </section>
             </div>
         </div>
-            <div className='homeProducts-Accessories'>
-                <div className='left'>
-                    <h5>ACCESSORIES</h5>
-                </div>
-                <div className='right'>
-                    <Accessories />
-                </div>
-            </div>
+            
         </div>
-        
-        {/* <Footer /> */}
+
         </>
     );
 }
