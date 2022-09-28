@@ -1,6 +1,6 @@
 import React from 'react'
 // import {useState} from 'react'
-function AddToCartButton({product}) {
+function AddToCartButton({products}) {
     // const [state,setState] = useState()
     // console.log(state)
     const addToCartClick = document.querySelector('.addToCartClick')
@@ -13,11 +13,11 @@ function AddToCartButton({product}) {
         const  localStore = localStorage.getItem('cart')
         if(localStore){
             const json = JSON.parse(localStore)
-            json.push(product)
+            json.push(products)
             localStorage.setItem('cart',JSON.stringify(json))
         
         }else{
-            const json = JSON.stringify([product])
+            const json = JSON.stringify([products])
             localStorage.setItem('cart',json)
         }
     }
