@@ -96,6 +96,17 @@
 
         }
     }
+    .noti{
+        width:90%;
+        .notiTop{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .notiBottom{
+            width:100%;
+            margin:20px auto;
+        }
+    }
     .clickOnTop{
         display: none;
     }
@@ -123,14 +134,9 @@
         }
     }
     .allProducts{
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         
-        grid-template-columns: 1fr 1fr ;
-        margin:3px auto;
-        .product{
-        
-            width:100%
-        }
     }
     .homeMore{
         height:auto;
@@ -143,11 +149,25 @@
             display: none;
         }
     }
+    .noti{
+        .notiBottom{
+            img{
+                margin: auto;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            input{
+                width:50%;
+                margin-left:18%;
+            }
+        }
+    }
     .footer{
         width:100%;
         justify-content:center;
         video{
             display:none;
+
         }
         .right{
             width:100%;

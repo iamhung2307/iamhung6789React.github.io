@@ -176,12 +176,11 @@ code {
     background-attachment: fixed;
     background-size: cover;
   }
+  
   .homeMore2{
     background-image: url(../img/products/banner/shop7.webp);
     background-attachment: fixed;
     background-size: cover;
-    
-    
   }
   section{
     width:80%;
@@ -209,6 +208,52 @@ code {
   .text{
     margin: auto;
   }
+  }
+  
+}
+.noti{
+  img{
+    width:70px;
+  }
+  width:80%;
+  margin:20px auto;
+  .notiTop{
+    display: flex;
+    justify-content: space-around;
+    
+    .contentNoti{
+      display: flex;
+    }
+    .contentNoti-text{
+      display: block;
+      margin-left: 20px;
+      line-height: 5px;
+      margin-top: 20px;
+      span{
+        font-weight: 700;
+      }
+    }
+  }
+  .notiBottom{ 
+    display: flex;
+    margin: 25px 18%;
+    .contentNoti-text{
+      margin-left: 20px;
+      span{
+        font-weight: 700;
+      }
+      margin: auto 35px;
+    }
+    input{
+      margin: auto 0;
+      margin-left: 30px;
+      width:300px;
+      height:46px;
+    }
+    button{
+      margin: auto 0;
+      height:46px;
+    }
   }
 }
 .footer{

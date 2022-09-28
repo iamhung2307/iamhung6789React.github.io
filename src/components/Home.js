@@ -7,7 +7,10 @@ import Men from './Men';
 import Accessories from './Accessories';
 // import { useEffect } from 'react';
 
-
+import imgNoti1 from '../img/icon/stamp.png'
+import imgNoti2 from '../img/icon/freeShipping.png'
+import imgNoti3 from '../img/icon/support.png'
+import imgNotiEvent from '../img/icon/notification.png'
 function Home(){
     console.log(window.innerWidth)
     
@@ -64,6 +67,34 @@ function Home(){
                 </div>
             </div>
             
+            <div className='noti'>
+                <div className='notiTop'>
+                
+                    <div className='contentNoti'>
+                        <img src={imgNoti1}></img>
+                        <div className='contentNoti-text'>
+                            <p>sản phẩm</p>
+                            <span>ĐỘC QUYỀN</span>
+                        </div>
+                    </div>
+                    <div className='contentNoti'>
+                        <img src={imgNoti2}></img>
+                        <div className='contentNoti-text'>
+                            <p>Miễn phí vận chuyển</p>
+                            <span>TOÀN QUỐC</span>
+                        </div>
+                    </div>
+                    <div className='contentNoti'>
+                        <img src={imgNoti3}></img>
+                        <div className='contentNoti-text'>
+                            <p>hotline hỗ trợ</p>
+                            <span>1900 1001</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
             <div className='homeMore'>
             <div className='homeMore2'>
                 <section>
@@ -78,7 +109,17 @@ function Home(){
                 </section>
             </div>
         </div>
-            
+        <div className='noti'>
+            <div className='notiBottom'>
+                <img src={imgNotiEvent}></img>
+                <div className='contentNoti-text'>
+                    <span>Đăng kí nhận tin</span>
+                    <p>đăng kí để nhận ngay những chương trình khuyễn mãi hot</p>
+                </div>
+                <input type='email' placeholder='your email'></input>
+                <button>Submit</button>
+            </div>
+        </div>  
         </div>
 
         </>

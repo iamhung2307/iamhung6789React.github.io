@@ -169,6 +169,51 @@ code {
   margin: auto;
 }
 
+.noti {
+  width: 80%;
+  margin: 20px auto;
+}
+.noti img {
+  width: 70px;
+}
+.noti .notiTop {
+  display: flex;
+  justify-content: space-around;
+}
+.noti .notiTop .contentNoti {
+  display: flex;
+}
+.noti .notiTop .contentNoti-text {
+  display: block;
+  margin-left: 20px;
+  line-height: 5px;
+  margin-top: 20px;
+}
+.noti .notiTop .contentNoti-text span {
+  font-weight: 700;
+}
+.noti .notiBottom {
+  display: flex;
+  margin: 25px 18%;
+}
+.noti .notiBottom .contentNoti-text {
+  margin-left: 20px;
+  margin: auto 35px;
+}
+.noti .notiBottom .contentNoti-text span {
+  font-weight: 700;
+}
+.noti .notiBottom input {
+  margin: auto 0;
+  margin-left: 30px;
+  width: 300px;
+  height: 46px;
+}
+.noti .notiBottom button {
+  margin: auto 0;
+  height: 46px;
+}
+
 .footer {
   display: flex;
   padding: 10px;

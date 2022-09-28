@@ -73,6 +73,17 @@
   .allProducts .product {
     height: 10%;
   }
+  .noti {
+    width: 90%;
+  }
+  .noti .notiTop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .noti .notiBottom {
+    width: 100%;
+    margin: 20px auto;
+  }
   .clickOnTop {
     display: none;
   }
@@ -92,12 +103,8 @@
     width: 100%;
   }
   .allProducts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 3px auto;
-  }
-  .allProducts .product {
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
   .homeMore {
     height: auto;
@@ -107,6 +114,17 @@
   }
   .homeMore .text {
     display: none;
+  }
+  .noti .notiBottom {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .noti .notiBottom img {
+    margin: auto;
+  }
+  .noti .notiBottom input {
+    width: 50%;
+    margin-left: 18%;
   }
   .footer {
     width: 100%;
