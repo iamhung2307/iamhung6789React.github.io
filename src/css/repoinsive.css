@@ -56,6 +56,15 @@
   .homeProducts .homeProducts-Men .right {
     width: 30px;
   }
+  .homeProducts .homeMore .homeMore1 section {
+    flex-wrap: wrap-reverse;
+  }
+  .homeProducts .homeMore .homeMore2 section {
+    flex-wrap: wrap;
+  }
+  .homeProducts .homeMore video {
+    margin: auto;
+  }
   .allProducts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -90,10 +99,24 @@
   .allProducts .product {
     width: 100%;
   }
-  .homeMore video {
+  .homeMore {
+    height: auto;
+  }
+  .homeMore section video {
+    width: 100%;
+  }
+  .homeMore .text {
     display: none;
+  }
+  .footer {
+    width: 100%;
+    justify-content: center;
   }
   .footer video {
     display: none;
+  }
+  .footer .right {
+    width: 100%;
+    margin: auto 16% auto 0;
   }
 }/*# sourceMappingURL=repoinsive.css.map */

@@ -119,12 +119,14 @@ code {
 .homeProducts .sliderTop .top span:hover {
   opacity: 1;
 }
-.homeProducts .sliderTop .top .women {
+.homeProducts .sliderTop .top span.active {
   opacity: 1;
 }
-.homeProducts .sliderTop .sliderProductMen,
-.homeProducts .sliderTop .sliderProductAccessories {
+.homeProducts .sliderTop .content .itemProduct {
   display: none;
+}
+.homeProducts .sliderTop .content .itemProduct.active {
+  display: flex;
 }
 
 .homeMore {
@@ -150,7 +152,8 @@ code {
   color: aliceblue;
 }
 .homeMore section h3 {
-  margin-top: 50px;
+  width: 80%;
+  margin: auto;
 }
 .homeMore section p {
   padding: 10px 100px;
@@ -158,10 +161,12 @@ code {
 .homeMore section video {
   border-radius: 10px;
   cursor: pointer;
-  width: 45%;
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }
-.homeMore section .text-white {
-  margin-top: 30px;
+.homeMore section .text {
+  margin: auto;
 }
 
 .footer {

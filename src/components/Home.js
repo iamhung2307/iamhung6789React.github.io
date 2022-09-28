@@ -5,47 +5,27 @@ import videoMore2 from '../img/video/Blvck Paris.mp4';
 import Women from './Women';
 import Men from './Men';
 import Accessories from './Accessories';
+// import { useEffect } from 'react';
 
 
 function Home(){
-    // function handle(){
-    //     const content = document.querySelector('.sliderTop .content')
-    //     // for(let i=0;i< 3;i++){
-    //         console.log(content)
-    //     // }
-    // }
-    // handle()
-    // (sliderProduct => (
-    //     // sliderProduct.addEventListener ('click',function(){
-    //     //     alert(this)
-    //     // })
-    //     console.log(sliderProduct)
-    // ))
-    function handleMen(){
-        // alert('men')
-        // document.querySelector('.content div').style.display = 'none'
-        
-        document.querySelector('.sliderProductWomen').style.display = 'none'
-        document.querySelector('.sliderProductAccessories').style.display = 'none'
-        document.querySelector('.sliderProductMen').style.display = 'flex'
-        document.querySelector('.sliderProductMen').style.opacity = 1
-    };
-    function handleWomen(){
-        // alert('women')
-        // document.querySelector('.content div').style.display = 'none'
-        
-        document.querySelector('.sliderProductMen').style.display = 'none'
-        document.querySelector('.sliderProductAccessories').style.display = 'none'
-        document.querySelector('.sliderProductWomen').style.display = 'flex'
-    };
-    function handleAccessories(){
-        // alert('acc')
-        // document.querySelector('.content div').style.display = 'none'
-       
-        document.querySelector('.sliderProductMen').style.display = 'none'
-        document.querySelector('.sliderProductWomen').style.display = 'none'
-        document.querySelector('.sliderProductAccessories').style.display = 'flex'
-    };
+    console.log(window.innerWidth)
+    
+    const spans = document.querySelectorAll('.top span')
+    const itemProducts = document.querySelectorAll('.content .itemProduct')
+
+    spans.forEach((span,index) => {
+        const itemProduct = itemProducts[index]
+        span.onclick = function (){
+            document.querySelector('.top span.active').classList.remove('active')
+            document.querySelector('.content .itemProduct.active').classList.remove('active')
+            
+            this.classList.add('active')
+            itemProduct.classList.add('active')
+            
+        }
+    })
+    
     return (
         <>
         {/* <Navbar /> */}
@@ -54,20 +34,19 @@ function Home(){
                 <source src={video}/>
             </video>
         </div>
-       
         <div className='homeProducts'>
             <div className='sliderTop'>
                 <div className='top'>
-                    <span onClick={handleMen}>Men</span>
+                    <span>Men</span>
                     <p> - </p>
-                    <span className='women' onClick={handleWomen}>Women</span>
+                    <span className='active'>Women</span>
                     <p> - </p>
-                    <span onClick={handleAccessories}> Accessories </span>
+                    <span  > Accessories </span>
                 </div>
                 <div className='content'>
-                    <div className='sliderProductMen'>< Men /></div>
-                    <div className='sliderProductWomen'>< Women /></div>
-                    <div className='sliderProductAccessories'>< Accessories /></div>
+                    <div className='itemProduct'>< Men /></div>
+                    <div className='itemProduct active'>< Women /></div>
+                    <div className='itemProduct'>< Accessories /></div>
                 </div>
             </div>
             <div className='homeMore'>
@@ -76,7 +55,7 @@ function Home(){
                         <video controls >
                             <source src={videoMore1}></source>
                         </video>
-                        <div>
+                        <div className='text'>
                             <h3>Blvck Genesis NFT Collection</h3>
                             <p>Proud to announce the Blvck Genesis NFT collection, a unique and never-seen-before NFT collection of avatars created by the lifestyle brand, Blvck Paris.</p>
                             {/* <button className="p-1"><a href="#">More...</a></button> */}
@@ -88,7 +67,7 @@ function Home(){
             <div className='homeMore'>
             <div className='homeMore2'>
                 <section>
-                    <div>
+                    <div className='text'>
                         <h3>An Inside Look at Blvck Store</h3>
                         <p>The shop was built with the Blvck lifestyle aesthetic featuring black ice creams, a basket ball hoop, a coffee corner, a unique limited edition 1meter tall Blvck Teddy bear, alongside with the brand’s popular lifestyle accessories throughout the room.</p>
                         {/* <button className="p-1"><a href="#">More...</a></button> */}

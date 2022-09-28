@@ -145,24 +145,32 @@ code {
         &:hover{
           opacity: 1;
         }
-        
-      }
-      .women{
-        opacity: 1;
+        &.active{
+          opacity: 1;
+        }
       }
       
+      
+    }
+    .content{
+      
+      .itemProduct{
+        display: none;
+      }
+      .itemProduct{
+        &.active{
+          display: flex;
+        }
+        
+      }
     }
     
-    .sliderProductMen,
-    .sliderProductAccessories{
-      display: none;
-    }
-
   }
 }
 .homeMore{
   width:100%;
   margin:auto;
+  
   .homeMore1{
     background-image: url(../img/products/banner/NFT.webp);
     background-attachment: fixed;
@@ -172,6 +180,8 @@ code {
     background-image: url(../img/products/banner/shop7.webp);
     background-attachment: fixed;
     background-size: cover;
+    
+    
   }
   section{
     width:80%;
@@ -180,8 +190,11 @@ code {
     padding: 10px;
     text-align: center;
     color:aliceblue;
+    // flex-wrap: wrap;
     h3{
-      margin-top: 50px;
+      
+      width:80%;
+      margin:auto;
     }
     p{
       padding:10px 100px;
@@ -189,10 +202,12 @@ code {
     video{
       border-radius: 10px;
       cursor:pointer;
-      width:45%;
+      width:50%;
+      height:50%;
+      margin: auto;
   }
-  .text-white{
-      margin-top: 30px;
+  .text{
+    margin: auto;
   }
   }
 }

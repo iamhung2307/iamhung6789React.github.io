@@ -48,6 +48,7 @@
             top:12px;
             right:20px;
         }
+        
     }
     .homeProducts{
         // display: none;
@@ -65,6 +66,23 @@
         .homeProducts-Men{
             .right{
                 width:30px;
+            }
+        }
+        .homeMore{
+            .homeMore1{
+                section{
+                    flex-wrap:wrap-reverse;
+                }
+            }
+            .homeMore2{
+                section{
+                    flex-wrap: wrap;
+                }
+            }
+            video{
+                // width:50%;
+                // height:50%;
+                margin: auto;
             }
         }
     }
@@ -86,6 +104,7 @@
     }
 }
 @media (max-width:740px){
+    
     .homeProducts{
         .homeProducts-Women,
         .homeProducts-Accessories{
@@ -114,13 +133,25 @@
         }
     }
     .homeMore{
-        video{
-            display:none;
+        height:auto;
+        section{
+            video{
+                width:100%;
+            }
+        }
+        .text{
+            display: none;
         }
     }
     .footer{
+        width:100%;
+        justify-content:center;
         video{
             display:none;
+        }
+        .right{
+            width:100%;
+            margin: auto 16% auto 0;
         }
     }
 }
