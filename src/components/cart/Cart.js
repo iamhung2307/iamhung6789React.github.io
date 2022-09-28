@@ -1,13 +1,22 @@
+// import { useState } from "react";
 
 
 function Cart() {
+  function convertMoney(num) {
+    return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+  }
   function handleClickBuy(){
     alert('Order Success !!! Thanks bro ')
   }
   const products = JSON.parse(localStorage.getItem('cart'))
+
+  const input = document.querySelector('.detailProductCart input')
+  if(input){
+    var valueInput = input.value
+  }
   return (
     <div className='detailCart'>
-      <div className='left'>
+      <div className='left'> 
       {products.map((product)=>{
         return (
             <div className="contentProductCart">
@@ -17,9 +26,9 @@ function Cart() {
               </div>
               <div className='detailProductCart'>
                 <h5>{product.name}</h5>
-                <h6>SIZE / {product.price}  </h6>
+                <h6>SIZE / {convertMoney(product.price)}</h6>
                 <input type='number' defaultValue={1}></input>
-                <p className='totalPrice'> = {product.price} </p>
+                <p className='totalPrice'> = {convertMoney(valueInput * product.price)} </p>
               </div>
             </div>
         )

@@ -91,6 +91,8 @@ function Nav(){
                     </li>
                     <li><Link to="products/accessories">ACCESSORIES</Link></li>
                     <li><Link to="products/contact">CONTACT</Link></li>
+                    <li className='cartLink'><Link to="cart">CART</Link></li>
+                    <li className='userLink'><Link to="login">USER</Link></li>
                 </ul>
                 <div className='img'>
                 <ul className='navCart'><li><Link to='/cart'><img src={imgCart}></img></Link></li></ul>

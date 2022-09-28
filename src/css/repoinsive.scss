@@ -23,8 +23,8 @@
             display: block;
             cursor: pointer; 
         }
-        ul:nth-child(3),
         .img,
+        ul:nth-child(3),
         .imgDropDown{
             display: none;
         }
@@ -48,7 +48,10 @@
             top:12px;
             right:20px;
         }
-        
+        .cartLink,
+        .userLink{
+            display: block;
+        }
     }
     .homeProducts{
         // display: none;
@@ -113,6 +116,20 @@
     .banner{
         height:130px;
     }
+    .detailCart{
+        display: flex;
+        flex-wrap: wrap;
+        .left{
+            width:100%;
+            margin: auto;
+        }
+        .right{
+            width:100%;
+            margin: auto;
+            margin-top: 30px;
+        }
+    }
+
 }
 @media (max-width:740px){
     

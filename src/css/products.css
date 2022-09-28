@@ -30,12 +30,7 @@
 }
 .allProducts .product {
   padding: 1px;
-}
-.allProducts .product .img:hover img:nth-child(1) {
-  display: none;
-}
-.allProducts .product .img:hover img:nth-child(2) {
-  display: block;
+  position: relative;
 }
 .allProducts .product .img img {
   width: 100%;
@@ -50,8 +45,31 @@
   text-align: center;
   background-color: #b6b6b6;
 }
+.allProducts .product .text button {
+  display: none;
+  border: 0;
+  outline: none;
+  margin-bottom: 5px;
+  background-color: rgba(182, 182, 182, 0);
+  font-weight: 500;
+  position: absolute;
+  margin-left: 20px;
+  top: 260px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+}
 .allProducts .product .page2 {
   display: none;
+}
+.allProducts .product:hover img:nth-child(1) {
+  display: none;
+}
+.allProducts .product:hover img:nth-child(2) {
+  display: block;
+}
+.allProducts .product:hover button {
+  display: block;
 }
 
 .Women .product {
@@ -210,6 +228,10 @@
 }
 .detailCart .right {
   width: 50%;
+  margin-top: 80px;
+  position: fixed;
+  top: 0;
+  right: 100px;
 }
 .detailCart .right h1 {
   text-align: center;

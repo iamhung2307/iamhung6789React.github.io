@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import video from '../img/video/bannerVideo.mp4';
 import videoMore1 from '../img/video/Phantoms.mp4'; 
 import videoMore2 from '../img/video/Blvck Paris.mp4';
@@ -12,7 +13,7 @@ import imgNoti2 from '../img/icon/freeShipping.png'
 import imgNoti3 from '../img/icon/support.png'
 import imgNotiEvent from '../img/icon/notification.png'
 function Home(){
-    console.log(window.innerWidth)
+    
     
     const spans = document.querySelectorAll('.top span')
     const itemProducts = document.querySelectorAll('.content .itemProduct')
@@ -61,7 +62,7 @@ function Home(){
                         <div className='text'>
                             <h3>Blvck Genesis NFT Collection</h3>
                             <p>Proud to announce the Blvck Genesis NFT collection, a unique and never-seen-before NFT collection of avatars created by the lifestyle brand, Blvck Paris.</p>
-                            {/* <button className="p-1"><a href="#">More...</a></button> */}
+                            <button className="p-1"><Link to="">More...</Link></button>
                         </div>
                     </section>
                 </div>
@@ -101,7 +102,7 @@ function Home(){
                     <div className='text'>
                         <h3>An Inside Look at Blvck Store</h3>
                         <p>The shop was built with the Blvck lifestyle aesthetic featuring black ice creams, a basket ball hoop, a coffee corner, a unique limited edition 1meter tall Blvck Teddy bear, alongside with the brand’s popular lifestyle accessories throughout the room.</p>
-                        {/* <button className="p-1"><a href="#">More...</a></button> */}
+                        <button className="p-1"><Link to="">More...</Link></button>
                     </div>
                     <video controls>
                         <source src={videoMore2}></source>

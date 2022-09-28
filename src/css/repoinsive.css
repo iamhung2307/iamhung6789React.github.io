@@ -21,8 +21,8 @@
     display: block;
     cursor: pointer;
   }
-  .nav ul:nth-child(3),
-.nav .img,
+  .nav .img,
+.nav ul:nth-child(3),
 .nav .imgDropDown {
     display: none;
   }
@@ -42,6 +42,10 @@
     position: absolute;
     top: 12px;
     right: 20px;
+  }
+  .nav .cartLink,
+.nav .userLink {
+    display: block;
   }
   .homeProducts .homeProducts-Women .left,
 .homeProducts .homeProducts-Accessories .left {
@@ -89,6 +93,19 @@
   }
   .banner {
     height: 130px;
+  }
+  .detailCart {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .detailCart .left {
+    width: 100%;
+    margin: auto;
+  }
+  .detailCart .right {
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
   }
 }
 @media (max-width: 740px) {

@@ -5,7 +5,9 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+    a{
+      text-decoration: none;
+    }
   }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -120,7 +122,10 @@ code {
     margin: auto;
     
   }
-  
+  .cartLink,
+  .userLink{
+    display: none;
+  }
 }
 .homeProducts{
   text-align: center;
@@ -170,7 +175,10 @@ code {
 .homeMore{
   width:100%;
   margin:auto;
-  
+  a{
+    color:black;
+    padding:10px;
+  }
   .homeMore1{
     background-image: url(../img/products/banner/NFT.webp);
     background-attachment: fixed;

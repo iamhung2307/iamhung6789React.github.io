@@ -13,7 +13,7 @@ function Detail() {
     const {id} = useParams()
     // const Id = id * 1
 
-    const [products, setProducts] = useState([]);
+    const [product, setProducts] = useState([]);
 
     const getProducts = async (page = 1, pageSize = 20) => {
         axios.get(`https://haiexpress.herokuapp.com/api/hung/products`, {
@@ -35,29 +35,29 @@ function Detail() {
         <>
         <Banner />
         <div className="addToCartClick">
-            <h5>{products.name} <img src={iconTichXanh}></img></h5>
+            <h5>{product.name} <img src={iconTichXanh}></img></h5>
             
         </div>
-        <div className="productDetail" key={products.id}>  
+        <div className="productDetail" key={product.id}>  
             <div className="imgDetail">
                 <div className="img1">
-                <img src={products.images} alt="react"></img>
-                    {/* {products.images.map((image) => {
+                <img src={product.images} alt="react"></img>
+                    {/* {product.images.map((image) => {
                         return <img src={image} alt="react"></img>; 
                     })} */}
                 </div>
                 <div className="imgBottom">
                     <div className="img2">
-                    <img src={products.images} alt="react"></img>
-                    {/* {products.images.map((image) => {
+                    <img src={product.images} alt="react"></img>
+                    {/* {product.images.map((image) => {
                         return <img src={image} alt="react"></img>;
                     })} */}
                     </div>
                 </div>
             </div>
             <div className="contentDetail">
-                <h1>{products.name}</h1>
-                <h3>{products.price}</h3>
+                <h1>{product.name}</h1>
+                <h3>{product.price}</h3>
                 <div className="size">
                     <button>S</button>
                     <button>M</button>
@@ -69,7 +69,7 @@ function Detail() {
 
                 </div>
                 <div className='cart'>
-                    < AddToCartButton products={products}/>
+                    < AddToCartButton product={product}/>
                 <div className='viewCart'>
                         <button onClick={handleClickViewCart}>VIEW CART</button>
                     </div>
@@ -77,11 +77,11 @@ function Detail() {
                 
                 <div className="content">
                     <h6> * DESCRIPTION</h6>
-                    <p>{products.description}</p>
+                    <p>{product.description}</p>
                 </div>
                 <div className="content">
                     <h6> * SHIPPING AND RETURNS</h6>
-                    <p>{products.description}</p>
+                    <p>{product.description}</p>
                 </div>
             </div>
 

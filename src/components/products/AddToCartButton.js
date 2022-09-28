@@ -1,6 +1,6 @@
 import React from 'react'
 // import {useState} from 'react'
-function AddToCartButton({products}) {
+function AddToCartButton({product}) {
     // const [state,setState] = useState()
     // console.log(state)
     const addToCartClick = document.querySelector('.addToCartClick')
@@ -9,24 +9,17 @@ function AddToCartButton({products}) {
         setTimeout(()=>{
             addToCartClick.style.display = 'none'
         },3000)
-        const arr = new Array()
+        // const arr = new Array()
         const  localStore = localStorage.getItem('cart')
         if(localStore){
             const json = JSON.parse(localStore)
-            json.push(products)
+            json.push(product)
             localStorage.setItem('cart',JSON.stringify(json))
         
         }else{
-            const json = JSON.stringify([products])
+            const json = JSON.stringify([product])
             localStorage.setItem('cart',json)
         }
-        // const data = JSON.stringify(products)
-        // localStorage.setItem('cart',data)
-        // arr.push(data)
-        // localStorage.setItem('cart',JSON.stringify(products))
-        // const json = localStorage.getItem('cart')
-        // arr.push(json)
-        // localStorage.setItem('cart',arr)
     }
     
     return (
