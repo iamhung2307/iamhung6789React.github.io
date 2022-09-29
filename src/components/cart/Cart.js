@@ -4,23 +4,36 @@ import imgClose from '../../img/icon/close.png'
 
 function Cart() {
   const products = JSON.parse(localStorage.getItem('cart'))
-  const [state,setState] = useState(products)
   
+  const [state,setState] = useState(products)
+
   function convertMoney(num) {
     return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
   }
   function handleClickBuy(){
     alert('Order Success !!! Thanks bro ')
   }
+ 
 
-  
   useEffect(()=>{
+    function handleCartNull(){
+      const productCart = document.querySelector('.contentProductCart')
+      const cartNull = document.querySelector('.cartNull')
+      const rightCart = document.querySelector('.detailCart .right')
+      if(productCart == null){
+        console.log('dsad')
+        rightCart.style.display = 'none'
+        cartNull.style.display = 'block'
+      }
+    }
+    handleCartNull()
+
     function handleRemoveProductCart(){
       
         document.querySelectorAll('.imgClose').forEach((imgClose,indexClose)=>{
             imgClose.onclick = function(){
-              
-              if(localStorage.getItem('cart')){
+              const localCart = localStorage.getItem('cart')
+              if(localCart){
                 setState(products.splice(indexClose,1))
                 localStorage.setItem('cart',JSON.stringify(products))
               }
@@ -29,14 +42,19 @@ function Cart() {
         })
     }
     handleRemoveProductCart()
+    
   },[])
 
   return (
     <div className='detailCart'>
       <div className='left'> 
+      <div className='cartNull' style={{display:'none'}}>
+        <h1>ố Ồ...chưa có gì ở đây cả</h1>
+      </div>
       {products.map((product)=>{
         return (
             <div className="contentProductCart">
+              
               <div className='detailCartMini'>
                 <div className='imgCart'>
                   {/* <img src={products.images}></img> */}
