@@ -4,7 +4,7 @@ import imgClose from '../../img/icon/close.png'
 
 function Cart() {
   const products = JSON.parse(localStorage.getItem('cart'))
-  
+
   const [state,setState] = useState(products)
 
   function convertMoney(num) {
@@ -63,7 +63,7 @@ function Cart() {
                 <div className='detailProductCart'>
                   <h5>{product.name}</h5>
                   <h6>SIZE / {convertMoney(product.price)}</h6>
-                  <input type='number' defaultValue={1}></input>
+                  <input type='number'  defaultValue={1}></input>
                   <p className='totalPrice'> = {convertMoney(product.price)} </p>
                 </div>
               </div>

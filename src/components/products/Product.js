@@ -6,21 +6,30 @@ import iconTichXanh from'../../img/icon/tichxanhicon.png'
 export function Product({ product }) {
   const addToCartClick = document.querySelector('.addToCartClick')
   function handleClick(){
+    
     addToCartClick.style.display = 'block'
         setTimeout(()=>{
             addToCartClick.style.display = 'none'
         },3000)
     const localStore = localStorage.getItem('cart')
     if(localStore){
-        const json = JSON.parse(localStore)
-        json.push(product)
-        localStorage.setItem('cart',JSON.stringify(json))
-    
+        
+        if(product.id){
+
+          // quantity += 1 
+
+        }else{
+          const json = JSON.parse(localStore)
+          json.push(product)
+          localStorage.setItem('cart',JSON.stringify(json))
+        }
+        
     }else{
         const json = JSON.stringify([product])
         localStorage.setItem('cart',json)
     }
   }
+  
   function convertMoney(num) {
     return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
   }
@@ -43,7 +52,7 @@ export function Product({ product }) {
         <div className="text">
           <Link to={`/products/${product.sex}/${product.id}`}><h5>{product.name}</h5></Link>
           <p>{convertMoney(product.price)}</p>
-          <button onClick={handleClick}>ADD TO CARD</button>
+          <button onClick={handleClick}>ADD TO CART</button>
           
         </div>
       </div>
