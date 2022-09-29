@@ -16,12 +16,10 @@ export function Product({ product }) {
         
         if(product.id){
 
-          // quantity += 1 
-
-        }else{
           const json = JSON.parse(localStore)
           json.push(product)
           localStorage.setItem('cart',JSON.stringify(json))
+
         }
         
     }else{
