@@ -140,8 +140,7 @@
     margin: auto;
   }
   .noti .notiBottom input {
-    width: 50%;
-    margin-left: 18%;
+    width: 100%;
   }
   .footer {
     width: 100%;

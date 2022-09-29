@@ -8,7 +8,7 @@ export function AllProducts() {
 
   const getProducts = async (page = 1, pageSize = 20) => {
     
-    axios.get(`https://haiexpress.herokuapp.com/api/hung/products`, {
+    axios.get(`https://demobe.adaptable.app/api/hung/products`, {
         params: { page, pageSize }
       })
       .then((res) => {

@@ -177,6 +177,7 @@
   position: fixed;
   top: 130px;
   right: 50px;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.907);
   color: white;
   display: none;
@@ -199,6 +200,7 @@
   display: flex;
   width: 80%;
   margin: 100px auto;
+  min-height: 37vh;
 }
 .detailCart .left {
   display: block;
@@ -211,20 +213,29 @@
   border-top: 1px solid;
   border-bottom: 1px solid;
 }
-.detailCart .left .contentProductCart .imgCart {
+.detailCart .left .contentProductCart .detailCartMini {
+  width: 90%;
+  display: flex;
+}
+.detailCart .left .contentProductCart .detailCartMini .imgCart {
   width: 30%;
   padding-top: 10px;
   margin-left: 20px;
 }
-.detailCart .left .contentProductCart .imgCart img {
+.detailCart .left .contentProductCart .detailCartMini .imgCart img {
   width: 80%;
 }
-.detailCart .left .contentProductCart .detailProductCart {
+.detailCart .left .contentProductCart .detailCartMini .detailProductCart {
   padding-top: 10px;
   width: 70%;
 }
-.detailCart .left .contentProductCart .detailProductCart input {
+.detailCart .left .contentProductCart .detailCartMini .detailProductCart input {
   width: 50px;
+}
+.detailCart .left .imgClose img {
+  width: 18px;
+  margin: 20px 20px;
+  cursor: pointer;
 }
 .detailCart .right {
   width: 50%;

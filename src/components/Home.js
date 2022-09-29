@@ -62,7 +62,7 @@ function Home(){
                         <div className='text'>
                             <h3>Blvck Genesis NFT Collection</h3>
                             <p>Proud to announce the Blvck Genesis NFT collection, a unique and never-seen-before NFT collection of avatars created by the lifestyle brand, Blvck Paris.</p>
-                            <button className="p-1"><Link to="">More...</Link></button>
+                            {/* <button className="p-1"><Link to="">More...</Link></button> */}
                         </div>
                     </section>
                 </div>
@@ -102,7 +102,7 @@ function Home(){
                     <div className='text'>
                         <h3>An Inside Look at Blvck Store</h3>
                         <p>The shop was built with the Blvck lifestyle aesthetic featuring black ice creams, a basket ball hoop, a coffee corner, a unique limited edition 1meter tall Blvck Teddy bear, alongside with the brand’s popular lifestyle accessories throughout the room.</p>
-                        <button className="p-1"><Link to="">More...</Link></button>
+                        {/* <button className="p-1"><Link to="">More...</Link></button> */}
                     </div>
                     <video controls>
                         <source src={videoMore2}></source>
@@ -117,8 +117,10 @@ function Home(){
                     <span>Đăng kí nhận tin</span>
                     <p>đăng kí để nhận ngay những chương trình khuyễn mãi hot</p>
                 </div>
-                <input type='email' placeholder='your email'></input>
-                <button>Submit</button>
+                <div className='btnEmail'>
+                    <input type='email' placeholder='your email'></input>
+                    <button>Submit</button>
+                </div>
             </div>
         </div>  
         </div>
