@@ -246,7 +246,7 @@
                 display: flex;
                 .imgCart{
                     width:30%;
-                    padding-top: 10px;
+                    padding: 10px 0; 
                     margin-left: 20px;
                     img{
                         width:80%;
@@ -257,7 +257,7 @@
     
                     width:70%;
                     input{
-                        width:50px;
+                        width:30%;
                     }
                 }
             }
@@ -306,7 +306,8 @@
                 margin: auto;
                 font-weight: 500;
                 justify-content: space-between;
-                p:nth-child(2){
+                p{
+                    margin: auto;
                     span{
                         color:red;
                     }

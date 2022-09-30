@@ -8,24 +8,20 @@ export function Product({ product }) {
   function handleClick(){
     
     addToCartClick.style.display = 'block'
-        setTimeout(()=>{
-            addToCartClick.style.display = 'none'
-        },3000)
-    const localStore = localStorage.getItem('cart')
-    if(localStore){
-        
-        if(product.id){
+      setTimeout(()=>{
+          addToCartClick.style.display = 'none'
+      },3000)
 
+      const  localStore = localStorage.getItem('cart')
+      if(localStore){
           const json = JSON.parse(localStore)
           json.push(product)
           localStorage.setItem('cart',JSON.stringify(json))
-
-        }
-        
-    }else{
-        const json = JSON.stringify([product])
-        localStorage.setItem('cart',json)
-    }
+          
+      }else{
+          const json = JSON.stringify([product])
+          localStorage.setItem('cart',json)
+      }
   }
   
   function convertMoney(num) {

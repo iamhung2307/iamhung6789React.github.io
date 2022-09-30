@@ -219,7 +219,7 @@
 }
 .detailCart .left .contentProductCart .detailCartMini .imgCart {
   width: 30%;
-  padding-top: 10px;
+  padding: 10px 0;
   margin-left: 20px;
 }
 .detailCart .left .contentProductCart .detailCartMini .imgCart img {
@@ -230,7 +230,7 @@
   width: 70%;
 }
 .detailCart .left .contentProductCart .detailCartMini .detailProductCart input {
-  width: 50px;
+  width: 30%;
 }
 .detailCart .left .imgClose img {
   width: 18px;
@@ -272,7 +272,10 @@
   font-weight: 500;
   justify-content: space-between;
 }
-.detailCart .right .total .totalPrice p:nth-child(2) span {
+.detailCart .right .total .totalPrice p {
+  margin: auto;
+}
+.detailCart .right .total .totalPrice p span {
   color: red;
 }
 .detailCart .right .total button {
