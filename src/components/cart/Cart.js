@@ -1,29 +1,26 @@
 // import { useState } from "react";
 import { useEffect, useState } from 'react';
-import imgClose from '../../img/icon/close.png'
 
+import CartHTML from './CartHTML';
+// import imgCong from '../../img/icon/add.png'
+// import imgTru from '../../img/icon/minus.png'
 function Cart() {
   const products = JSON.parse(localStorage.getItem('cart'))
 
   const [state,setState] = useState(products)
-  // const [onChange,setOnchange] = useState()
-  function convertMoney(num) {
-    return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
-  }
+
+    function convertMoney(num) {
+        return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+      }
+  
   function handleClickBuy(){
     alert('Order Success !!! Thanks bro ')
   }
   // handle total price
   const totals = products.reduce(function(accumulator,currentValue){
-    const total = accumulator + currentValue.price 
+    const total = accumulator + currentValue.price
     return total
   },0)
-
-  // // handle product price 
-  const handleOnchange =  function handleOnchange(){
-    
-    
-  }
   
   useEffect(()=>{
     function handleCartNull(){
@@ -65,24 +62,7 @@ function Cart() {
       </div>
       {products.map((product)=>{
         return (
-          <div className="contentProductCart">
-            
-            <div className='detailCartMini'>
-              <div className='imgCart'>
-                {/* <img src={products.images}></img> */}
-                <img src={product.images} alt="react"></img>
-              </div>
-              <div className='detailProductCart'>
-                <h5>{product.name}</h5>
-                <h6>SIZE / {convertMoney(product.price)}</h6>
-                <input type='number' onChange={handleOnchange} defaultValue='1'></input>
-                {/* <p className='totalPrice'> = {convertMoney(totals)} </p> */}
-              </div>
-            </div>
-            <div className='imgClose'>
-              <img src={imgClose} ></img>
-            </div>
-          </div>
+          < CartHTML product = {product}/>
         )
       })}
     </div>

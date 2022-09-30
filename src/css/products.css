@@ -229,8 +229,19 @@
   padding-top: 10px;
   width: 70%;
 }
-.detailCart .left .contentProductCart .detailCartMini .detailProductCart input {
+.detailCart .left .contentProductCart .detailCartMini .detailProductCart div input {
   width: 30%;
+  padding-left: 10px;
+}
+.detailCart .left .contentProductCart .detailCartMini .detailProductCart div button {
+  border: 0;
+  outline: none;
+  background-color: rgba(182, 182, 182, 0);
+}
+.detailCart .left .contentProductCart .detailCartMini .detailProductCart div button img {
+  width: 12px;
+  margin: auto;
+  padding-bottom: 3px;
 }
 .detailCart .left .imgClose img {
   width: 18px;
@@ -256,7 +267,7 @@
   width: 100%;
   margin: 10px;
   padding: 5px 10px;
-  border: 0;
+  border: none;
   outline: none;
   border-bottom: 1px solid;
 }

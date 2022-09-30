@@ -256,9 +256,25 @@
                     padding-top: 10px;
     
                     width:70%;
-                    input{
-                        width:30%;
+                    div{
+                        input{
+                            width:30%;
+                            padding-left: 10px;
+                        }
+                        button{
+                            img{
+                                width:12px;
+                                margin: auto;
+                                
+                                padding-bottom: 3px;
+                                
+                            }
+                                border: 0;
+                                outline: none;
+                                background-color: #b6b6b600;
+                        }
                     }
+                    
                 }
             }
         }
@@ -289,7 +305,8 @@
                 width: 100%;
                 margin: 10px;
                 padding: 5px 10px;
-                border: 0;
+                border: none;
+                
                 outline: none;
                 border-bottom: 1px solid;
                 
