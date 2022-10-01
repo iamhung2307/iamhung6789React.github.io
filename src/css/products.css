@@ -274,7 +274,7 @@
 .detailCart .right .total {
   height: 100px;
 }
-.detailCart .right .total .totalPrice {
+.detailCart .right .total .totalPrices {
   width: 50%;
   display: flex;
   padding: 10px;
@@ -283,10 +283,10 @@
   font-weight: 500;
   justify-content: space-between;
 }
-.detailCart .right .total .totalPrice p {
+.detailCart .right .total .totalPrices p {
   margin: auto;
 }
-.detailCart .right .total .totalPrice p span {
+.detailCart .right .total .totalPrices p span {
   color: red;
 }
 .detailCart .right .total button {
