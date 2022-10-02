@@ -80,6 +80,82 @@
         }
     }
 }
+
+// slider AllProducts
+.sliderAllProduct{
+    // width:80%+30%;
+    margin: auto 10%;
+    // display: flex;
+    overflow: hidden;
+    .allProducts{
+        display: flex;
+        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        width:160%;
+        margin:10px auto 0 auto;
+        
+        a{
+            text-decoration: none;
+            color:black;
+            &:hover{
+                color:white;
+            }
+        }
+        .product{
+            // width:20%;
+            padding: 1px;
+            position: relative;
+            // margin: 1px 0;
+            .img{
+                
+                img{
+                    width: 100%;
+                }
+                img:nth-child(2){
+                    display: none;
+                }
+                img:nth-child(3){
+                    display: none;
+                }
+            }
+            .text{
+                text-align: center;
+                background-color: #b6b6b6;
+                button{
+                    display: none;
+                    border: 0;
+                    outline: none;
+                    margin-bottom: 5px;
+                    background-color: #b6b6b600;
+                    font-weight: 500;
+                    position: absolute;
+                    margin-left: 20px;
+                    top:260px;
+                    color:rgb(255, 255, 255);
+                    font-size: 20px;
+                    font-weight: 700;
+                    // &:hover{
+                    //  color:white;   
+                    // }
+                }
+            }
+            .page2{
+                display:none;
+            }
+            &:hover{
+                img:nth-child(1){
+                    display: none;
+                }
+                img:nth-child(2){
+                    display: block;
+                }
+                button{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 // Women.js
 .Women{
     .product{

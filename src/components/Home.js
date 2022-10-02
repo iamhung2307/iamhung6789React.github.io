@@ -1,17 +1,24 @@
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import video from '../img/video/bannerVideo.mp4';
 import videoMore1 from '../img/video/Phantoms.mp4'; 
 import videoMore2 from '../img/video/Blvck Paris.mp4';
 import Women from './Women';
 import Men from './Men';
 import Accessories from './Accessories';
+// import Carousel from './slider/Slider';
+
+// import { AllProducts } from './products';
+
 // import { useEffect } from 'react';
 
 import imgNoti1 from '../img/icon/stamp.png'
 import imgNoti2 from '../img/icon/freeShipping.png'
 import imgNoti3 from '../img/icon/support.png'
 import imgNotiEvent from '../img/icon/notification.png'
+import Sliders from './Slider';
+// import imgLeftArrow from '../img/icon/leftArrow.png'
+// import imgRightArrow from '../img/icon/rightArrow.png'
 function Home(){
     
     
@@ -29,7 +36,12 @@ function Home(){
             
         }
     })
-    
+    // const handleClickLeftArrow = () => {
+    //     document.querySelector('.sliderAllProduct').style.width = "-20%"
+    // }
+    // const handleClickRightArrow = () => {
+
+    // }
     return (
         <>
         {/* <Navbar /> */}
@@ -67,32 +79,23 @@ function Home(){
                     </section>
                 </div>
             </div>
-            
+
+            <div className='slider'>
+                < Sliders />
+            </div>
             <div className='noti'>
-                <div className='notiTop'>
-                
-                    <div className='contentNoti'>
-                        <img src={imgNoti1}></img>
-                        <div className='contentNoti-text'>
-                            <p>sản phẩm</p>
-                            <span>ĐỘC QUYỀN</span>
-                        </div>
-                    </div>
-                    <div className='contentNoti'>
-                        <img src={imgNoti2}></img>
-                        <div className='contentNoti-text'>
-                            <p>Miễn phí vận chuyển</p>
-                            <span>TOÀN QUỐC</span>
-                        </div>
-                    </div>
-                    <div className='contentNoti'>
-                        <img src={imgNoti3}></img>
-                        <div className='contentNoti-text'>
-                            <p>hotline hỗ trợ</p>
-                            <span>1900 1001</span>
-                        </div>
-                    </div>
+            <div className='notiBottom'>
+                <img src={imgNotiEvent}></img>
+                <div className='contentNoti-text'>
+                    <span>Đăng kí nhận tin</span>
+                    <p>đăng kí để nhận ngay những chương trình khuyễn mãi hot</p>
                 </div>
+                <div className='btnEmail'>
+                    <input type='email' placeholder='your email'></input>
+                    <button>Submit</button>
+                </div>
+            </div>
+                
                 
             </div>
 
@@ -111,15 +114,28 @@ function Home(){
             </div>
         </div>
         <div className='noti'>
-            <div className='notiBottom'>
-                <img src={imgNotiEvent}></img>
-                <div className='contentNoti-text'>
-                    <span>Đăng kí nhận tin</span>
-                    <p>đăng kí để nhận ngay những chương trình khuyễn mãi hot</p>
+        <div className='notiTop'>
+                
+                <div className='contentNoti'>
+                    <img src={imgNoti1}></img>
+                    <div className='contentNoti-text'>
+                        <p>sản phẩm</p>
+                        <span>ĐỘC QUYỀN</span>
+                    </div>
                 </div>
-                <div className='btnEmail'>
-                    <input type='email' placeholder='your email'></input>
-                    <button>Submit</button>
+                <div className='contentNoti'>
+                    <img src={imgNoti2}></img>
+                    <div className='contentNoti-text'>
+                        <p>Miễn phí vận chuyển</p>
+                        <span>TOÀN QUỐC</span>
+                    </div>
+                </div>
+                <div className='contentNoti'>
+                    <img src={imgNoti3}></img>
+                    <div className='contentNoti-text'>
+                        <p>hotline hỗ trợ</p>
+                        <span>1900 1001</span>
+                    </div>
                 </div>
             </div>
         </div>  

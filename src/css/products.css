@@ -72,6 +72,66 @@
   display: block;
 }
 
+.sliderAllProduct {
+  margin: auto 10%;
+  overflow: hidden;
+}
+.sliderAllProduct .allProducts {
+  display: flex;
+  width: 160%;
+  margin: 10px auto 0 auto;
+}
+.sliderAllProduct .allProducts a {
+  text-decoration: none;
+  color: black;
+}
+.sliderAllProduct .allProducts a:hover {
+  color: white;
+}
+.sliderAllProduct .allProducts .product {
+  padding: 1px;
+  position: relative;
+}
+.sliderAllProduct .allProducts .product .img img {
+  width: 100%;
+}
+.sliderAllProduct .allProducts .product .img img:nth-child(2) {
+  display: none;
+}
+.sliderAllProduct .allProducts .product .img img:nth-child(3) {
+  display: none;
+}
+.sliderAllProduct .allProducts .product .text {
+  text-align: center;
+  background-color: #b6b6b6;
+}
+.sliderAllProduct .allProducts .product .text button {
+  display: none;
+  border: 0;
+  outline: none;
+  margin-bottom: 5px;
+  background-color: rgba(182, 182, 182, 0);
+  font-weight: 500;
+  position: absolute;
+  margin-left: 20px;
+  top: 260px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+}
+.sliderAllProduct .allProducts .product .page2 {
+  display: none;
+}
+.sliderAllProduct .allProducts .product:hover img:nth-child(1) {
+  display: none;
+}
+.sliderAllProduct .allProducts .product:hover img:nth-child(2) {
+  display: block;
+}
+.sliderAllProduct .allProducts .product:hover button {
+  display: block;
+}
+
 .Women .product {
   display: none;
 }

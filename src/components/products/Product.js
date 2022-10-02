@@ -1,10 +1,12 @@
-import React from "react";
-import {Link} from 'react-router-dom'
+import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 
-// import AddToCartButton from "./AddToCartButton";
 import iconTichXanh from'../../img/icon/tichxanhicon.png'
+
+
 export function Product({ product }) {
   const addToCartClick = document.querySelector('.addToCartClick')
+  const [newValue,setNewValue] = useState()
   function handleClick(){
     
     addToCartClick.style.display = 'block'
@@ -22,8 +24,11 @@ export function Product({ product }) {
           const json = JSON.stringify([product])
           localStorage.setItem('cart',json)
       }
-  }
-  
+      // setNewValue(oldValue => {
+      //   oldValue[index].quantity = quantity
+      //   return oldValue
+      // } 
+    }
   function convertMoney(num) {
     return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
   }

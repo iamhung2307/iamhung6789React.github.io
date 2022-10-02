@@ -9,8 +9,8 @@ function Cart() {
   const products = JSON.parse(localStorage.getItem('cart'))
   function convertMoney(num) {
     return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
-}
-function handleClickBuy(){
+  }
+  function handleClickBuy(){
     alert('Order Success !!! Thanks bro ')
   }
   const [state,setState] = useState(products)
@@ -82,9 +82,7 @@ function handleClickBuy(){
             </div>
         </div>
     </div>
-  ) 
-  
-
+  )
 }
 
 export default Cart

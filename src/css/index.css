@@ -190,9 +190,12 @@ code {
 .noti .notiTop {
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
 }
 .noti .notiTop .contentNoti {
   display: flex;
+  padding: 10px;
 }
 .noti .notiTop .contentNoti-text {
   display: block;

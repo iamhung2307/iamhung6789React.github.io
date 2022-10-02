@@ -220,6 +220,7 @@ code {
   
 }
 .noti{
+  
   img{
     width:70px;
   }
@@ -228,9 +229,11 @@ code {
   .notiTop{
     display: flex;
     justify-content: space-around;
-    
+    border-bottom: 1px solid;
+    border-top: 1px solid;
     .contentNoti{
       display: flex;
+      padding: 10px;
     }
     .contentNoti-text{
       display: block;
@@ -245,6 +248,7 @@ code {
   .notiBottom{ 
     display: flex;
     margin: 25px 18%;
+    
     .contentNoti-text{
       margin-left: 20px;
       span{
