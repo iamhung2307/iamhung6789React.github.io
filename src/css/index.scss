@@ -85,6 +85,7 @@ code {
         width:45%;
       }
       .imgDropDown{
+        display: flex;
         width: 55%;
         img:nth-child(1){
           width:38%;
@@ -102,7 +103,7 @@ code {
     }
     &:hover{
       .dropDownChild{
-        display: flex;
+        display:flex;
       }
     }
   }

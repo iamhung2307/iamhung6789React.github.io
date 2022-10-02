@@ -68,6 +68,7 @@ code {
   width: 45%;
 }
 .nav .dropDown .dropDownChild .imgDropDown {
+  display: flex;
   width: 55%;
 }
 .nav .dropDown .dropDownChild .imgDropDown img:nth-child(1) {
