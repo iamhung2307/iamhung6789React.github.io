@@ -17,31 +17,28 @@ import imgNoti2 from '../img/icon/freeShipping.png'
 import imgNoti3 from '../img/icon/support.png'
 import imgNotiEvent from '../img/icon/notification.png'
 import Sliders from './Slider';
+import { useEffect } from 'react';
 // import imgLeftArrow from '../img/icon/leftArrow.png'
 // import imgRightArrow from '../img/icon/rightArrow.png'
 function Home(){
     
-    
-    const spans = document.querySelectorAll('.top span')
-    const itemProducts = document.querySelectorAll('.content .itemProduct')
+    useEffect(()=>{
+        const spans = document.querySelectorAll('.top span')
+        const itemProducts = document.querySelectorAll('.content .itemProduct')
 
-    spans.forEach((span,index) => {
-        const itemProduct = itemProducts[index]
-        span.onclick = function (){
-            document.querySelector('.top span.active').classList.remove('active')
-            document.querySelector('.content .itemProduct.active').classList.remove('active')
-            
-            this.classList.add('active')
-            itemProduct.classList.add('active')
-            
-        }
-    })
-    // const handleClickLeftArrow = () => {
-    //     document.querySelector('.sliderAllProduct').style.width = "-20%"
-    // }
-    // const handleClickRightArrow = () => {
+        spans.forEach((span,index) => {
+            const itemProduct = itemProducts[index]
+            span.onclick = function (){
+                document.querySelector('.top span.active').classList.remove('active')
+                document.querySelector('.content .itemProduct.active').classList.remove('active')
+                
+                this.classList.add('active')
+                itemProduct.classList.add('active')
+                
+            }
+        })
+    },[])
 
-    // }
     return (
         <>
         {/* <Navbar /> */}

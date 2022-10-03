@@ -6,7 +6,7 @@ import iconTichXanh from'../../img/icon/tichxanhicon.png'
 
 export function Product({ product }) {
   const addToCartClick = document.querySelector('.addToCartClick')
-  const [newValue,setNewValue] = useState()
+  // const [newValue,setNewValue] = useState()
   function handleClick(){
     
     addToCartClick.style.display = 'block'
@@ -24,10 +24,6 @@ export function Product({ product }) {
           const json = JSON.stringify([product])
           localStorage.setItem('cart',json)
       }
-      // setNewValue(oldValue => {
-      //   oldValue[index].quantity = quantity
-      //   return oldValue
-      // } 
     }
   function convertMoney(num) {
     return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
@@ -43,7 +39,7 @@ export function Product({ product }) {
 
           {product.images.map((image) => {
             return (
-              <img src={image} alt="react"></img>
+              <img src={image} alt="react" style={{width:'380px'}}></img>
             )
           })}
         </div>

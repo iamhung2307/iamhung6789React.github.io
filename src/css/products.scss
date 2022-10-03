@@ -30,12 +30,7 @@
     .product{
         padding: 1px;
         position: relative;
-        // margin: 1px 0;
         .img{
-            
-            img{
-                width: 100%;
-            }
             img:nth-child(2){
                 display: none;
             }
@@ -59,9 +54,6 @@
                 color:rgb(255, 255, 255);
                 font-size: 20px;
                 font-weight: 700;
-                // &:hover{
-                //  color:white;   
-                // }
             }
         }
         .page2{

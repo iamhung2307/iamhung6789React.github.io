@@ -32,9 +32,6 @@
   padding: 1px;
   position: relative;
 }
-.allProducts .product .img img {
-  width: 100%;
-}
 .allProducts .product .img img:nth-child(2) {
   display: none;
 }
