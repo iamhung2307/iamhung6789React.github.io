@@ -228,6 +228,10 @@
 }
 .productDetail .contentDetail .content p {
   padding: 10px;
+  display: none;
+}
+.productDetail .contentDetail .content:hover p {
+  display: block;
 }
 
 .addToCartClick {

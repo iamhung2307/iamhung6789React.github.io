@@ -7,12 +7,15 @@ import CartHTML from './CartHTML';
 function Cart() {
   
   const products = JSON.parse(localStorage.getItem('cart'))
+  // console.log(products)
   function convertMoney(num) {
     return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
   }
+
   function handleClickBuy(){
     alert('Order Success !!! Thanks bro ')
   }
+
   const [state,setState] = useState(products)
   // total Prices
   // const productCart = document.querySelectorAll('.contentProductCart .total')
@@ -49,6 +52,12 @@ function Cart() {
         })
     }
     handleRemoveProductCart()
+    // products.forEach((product)=>{
+    //   // console.log(product,index)
+    //   if(product.id){
+    //     localStorage.removeItem('cart',product.id)
+    //   }
+    // })
 
   },[])
   // console.log(products)

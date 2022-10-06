@@ -11,6 +11,7 @@ function AddToCartButton({products}) {
         },3000)
         // const arr = new Array()
         const  localStore = localStorage.getItem('cart')
+        console.log(localStore) 
         if(localStore){
             const json = JSON.parse(localStore)
             json.push(products)

@@ -260,7 +260,12 @@
             }
             p{
                 padding: 10px;
-                // display: none;
+                display: none;
+            }
+            &:hover{
+                p{
+                    display: block;
+                }
             }
         }
         
