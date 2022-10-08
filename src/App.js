@@ -14,23 +14,26 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="products" element={<AllProducts />}></Route>
+        <Route path="/" exact element={<Home />}></Route>
+        <Route path="/products" exact element={<AllProducts />}></Route>
 
         <Route
-          path="products/women"
-          element={<AllProducts category="women" />}
+          path="/products/women"
+          exact
+          element={<AllProducts key="women" category="women" />}
         ></Route>
         <Route
-          path="products/men"
-          element={<AllProducts category="men" />}
+          path="/products/men"
+          exact
+          element={<AllProducts key="men" category="men" />}
         ></Route>
         <Route
-          path="products/accessories"
-          element={<AllProducts category="Accessories" />}
+          path="/products/accessories"
+          exact
+          element={<AllProducts key="accessories" category="accessories" />}
         ></Route>
-        <Route path="products/contact" element={<Contact />}></Route>
-        <Route path="products/:name/:id" exact element={<Detail />}></Route>
+        <Route path="/products/contact" element={<Contact />}></Route>
+        <Route path="/products/:name/:id" exact element={<Detail />}></Route>
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
