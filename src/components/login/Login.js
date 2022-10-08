@@ -1,5 +1,5 @@
 
-import React, {  useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 // img
@@ -11,7 +11,8 @@ export default function Login() {
 
   const [name,setName] = useState()
   const [pass,setPass] = useState()
-
+  
+  
   function handleLogin(){
     const json = JSON.parse(localStorage.getItem(name))
     if(name == null || pass == null){
@@ -26,6 +27,16 @@ export default function Login() {
     }
     
   }
+  // useEffect(()=>{
+    
+  //   window.addEventListener("keydown", function (event) {
+  //     // console.log("keydown", event.key);
+  //     if(event.key == 'Enter'){
+  //       handleLogin()
+  //     }
+  //   });
+  // },[])
+
   return (
     <div className='bgLogin'>
       <div className='login'>

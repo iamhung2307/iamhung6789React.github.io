@@ -3,7 +3,6 @@
     background-attachment: fixed;
     width:100%;
     height: 400px;
-    // box-shadow: 1px 1px 5px 1px rgb(56, 56, 56);
     margin-bottom: 30px ;
     h1{
         text-align: center;
@@ -75,13 +74,10 @@
 
 // slider AllProducts
 .sliderAllProduct{
-    // width:80%+30%;
     margin: auto 10%;
-    // display: flex;
     overflow: hidden;
     .allProducts{
         display: flex;
-        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         width:160%;
         margin:10px auto 0 auto;
         
@@ -93,10 +89,8 @@
             }
         }
         .product{
-            // width:20%;
             padding: 1px;
             position: relative;
-            // margin: 1px 0;
             .img{
                 
                 img{
@@ -125,9 +119,6 @@
                     color:rgb(255, 255, 255);
                     font-size: 20px;
                     font-weight: 700;
-                    // &:hover{
-                    //  color:white;   
-                    // }
                 }
             }
             .page2{
@@ -221,7 +212,16 @@
                 
                 padding: 10px 20px;
                 margin: 3px;
+                // &:hover{
+                //     background-color: black;
+                //     color:white;
+                // }
+                &.active{
+                    background-color: black;
+                    color:white;
+                }
             }
+            
         }
         .cart{
             display: flex;

@@ -192,6 +192,10 @@
   padding: 10px 20px;
   margin: 3px;
 }
+.productDetail .contentDetail .size button.active {
+  background-color: black;
+  color: white;
+}
 .productDetail .contentDetail .cart {
   display: flex;
 }

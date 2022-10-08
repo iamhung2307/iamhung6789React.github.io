@@ -11,12 +11,14 @@ function AddToCartButton({products}) {
         },3000)
         // const arr = new Array()
         const  localStore = localStorage.getItem('cart')
-        console.log(localStore) 
-        if(localStore){
+        // const id = localStore.map((localItem)=>{
+        //     return localItem.id
+        // })
+        if(localStore ){
             const json = JSON.parse(localStore)
             json.push(products)
             localStorage.setItem('cart',JSON.stringify(json))
-        
+
         }else{
             const json = JSON.stringify([products])
             localStorage.setItem('cart',json)

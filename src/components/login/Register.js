@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 // img
 import imgLogin from '../../img/icon/imgLogin.png'
@@ -8,8 +8,8 @@ export default function Register() {
   const [name,setName] = useState()
   const [pass,setPass] = useState()
   const [confirmPass,setConfirmPass] = useState()
-  function handleSignUp(){
 
+  function handleSignUp(){
     if(name == null){
       alert('input your name , please')
     }else if(pass == null || confirmPass == null){
@@ -19,7 +19,6 @@ export default function Register() {
     }else if(pass == confirmPass){
       alert (`Name : ${name}` + '     ' + `Password : ${pass} `)
       navigate('/login')
-
     }
     let user = {
       name,
@@ -28,7 +27,14 @@ export default function Register() {
     const json = JSON.stringify(user)
     localStorage.setItem(name, json)
   }
-
+//  useEffect(()=>{
+//   window.addEventListener("keydown", function (event) {
+//     if(event.key == 'Enter'){
+//       handleSignUp()
+//     }
+//   });
+//  },[])
+  
   return (
     <div className='bgLogin'>
       <div className='login'>

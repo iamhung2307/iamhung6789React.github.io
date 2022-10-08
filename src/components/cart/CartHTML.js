@@ -22,9 +22,7 @@ function CartHTML({product}) {
             <h5>{product.name}</h5>
             <h6 className='totalPrice'>{convertMoney(product.price * onChanges) }</h6> 
             <div>
-
                 <input type='number' min='1' onChange={(value)=>setOnchanges(value.target.value)} defaultValue='1'></input>
-                
             </div>
             {/* <p className='totalPrice'> = {convertMoney(totals)} </p> */}
             </div>
@@ -32,8 +30,6 @@ function CartHTML({product}) {
         <div className='imgClose'>
             <img src={imgClose} ></img>
         </div>
-
-        
     </div>
    
 )

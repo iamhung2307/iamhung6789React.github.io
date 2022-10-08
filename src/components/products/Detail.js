@@ -25,12 +25,27 @@ function Detail() {
         })
         .catch((error) => console.log(error));
     };
+    const handleClickSize = () => {
+        const sizeButton = document.querySelectorAll('.size button')
+        sizeButton.forEach((size)=>{
+            
+            size.onclick = function(){
+                // console.log(size.target)
+                if(document.querySelector('.size button.active')){
+                    document.querySelector('.size button.active').classList.remove('active')
+                }
+                this.classList.add('active')
+            }
+        })
+    }
     useEffect(() => {
         getProducts();
+        handleClickSize();
     },[]);
     function handleClickViewCart(){
         navigate("/cart");
     }
+    const images = products.images
     return (
         <>
         <Banner />
@@ -41,17 +56,15 @@ function Detail() {
         <div className="productDetail" key={products.id}>  
             <div className="imgDetail">
                 <div className="img1">
-                <img src={products.images} alt="react"></img>
+                <img src={images} alt="react"></img>
                     {/* {products.images.map((image) => {
                         return <img src={image} alt="react"></img>; 
                     })} */}
                 </div>
                 <div className="imgBottom">
                     <div className="img2">
-                    <img src={products.images} alt="react"></img>
-                    {/* {products.images.map((image) => {
-                        return <img src={image} alt="react"></img>;
-                    })} */}
+                        <img src={images} alt="react"></img>
+                        
                     </div>
                 </div>
             </div>

@@ -27,7 +27,6 @@ function App (){
             <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="products" element={<AllProducts />}></Route>
-                
                 <Route path="products/women" element={<Women />}></Route>
                 <Route path="products/men" element={<Men />}></Route>
                 <Route path="products/accessories" element={<Accessories />}></Route>
