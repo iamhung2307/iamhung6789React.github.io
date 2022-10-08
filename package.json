@@ -10,6 +10,8 @@
     "boostrap": "^2.0.0",
     "bootstrap": "^5.2.1",
     "clsx": "^1.2.1",
+    "isexe": "^2.0.0",
+    "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",

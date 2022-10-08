@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../css/Slider.css";
-import Slider from "react-slick";
+import React, { useState, useEffect } from 'react';
+import Slider from 'react-slick';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './Slider.scss';
 
 function Sliders() {
   const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then((res) => res.json())
       .then((data) => {
         setSuggestions(data);
@@ -54,7 +55,7 @@ function Sliders() {
               <div className="card">
                 <img
                   className="rounded-circle"
-                  alt={"users here"}
+                  alt={'users here'}
                   src={`https://source.unsplash.com/random/${current.id}`}
                   height={56}
                   width={56}
