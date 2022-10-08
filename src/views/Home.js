@@ -49,13 +49,13 @@ export default function Home() {
           </div>
           <div className="content">
             <div className="itemProduct">
-              <AllProducts category="men" />
+              <AllProducts category="men" limit={3} />
             </div>
             <div className="itemProduct active">
-              <AllProducts category="women" />
+              <AllProducts category="women" limit={3} />
             </div>
             <div className="itemProduct">
-              <AllProducts category="accessories" />
+              <AllProducts category="accessories" limit={3} />
             </div>
           </div>
         </div>

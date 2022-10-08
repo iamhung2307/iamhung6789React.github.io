@@ -1,8 +1,5 @@
 import axios from 'axios';
 import { stringify } from 'querystring';
-import { notification } from 'antd';
-import { decodeToken } from 'react-jwt';
-import moment from 'moment';
 
 export const FetchAPI = async (
   path,

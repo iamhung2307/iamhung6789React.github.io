@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import {
+  changeCartQuantity,
+  deleteCartProduct,
+} from '../../redux/actions/cart';
+import { convertMoney } from '../../utils';
 
 import imgClose from '../../assets/img/icon/close.png';
 
-function CartHTML({ product }) {
-  const [onChanges, setOnchanges] = useState(1);
+function CartItem({ product }) {
+  const dispatch = useDispatch();
 
-  function convertMoney(num) {
-    return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
-  }
+  const handleRemoveProduct = () => {
+    dispatch(deleteCartProduct(product.id));
+  };
 
   return (
     <div className="contentProductCart">
@@ -18,24 +25,25 @@ function CartHTML({ product }) {
         <div className="detailProductCart">
           <h5>{product.name}</h5>
           <h6 className="totalPrice">
-            {convertMoney(product.price * onChanges)}
+            {convertMoney(product.price * product.order_quantity)}
           </h6>
           <div>
             <input
               type="number"
               min="1"
-              onChange={(value) => setOnchanges(value.target.value)}
-              defaultValue="1"
-            ></input>
+              onChange={(value) =>
+                dispatch(changeCartQuantity(product.id, value.target.value))
+              }
+              defaultValue={product.order_quantity}
+            />
           </div>
-          {/* <p className='totalPrice'> = {convertMoney(totals)} </p> */}
         </div>
       </div>
       <div className="imgClose">
-        <img alt="" src={imgClose}></img>
+        <img alt="" src={imgClose} onClick={handleRemoveProduct}></img>
       </div>
     </div>
   );
 }
 
-export default CartHTML;
+export default CartItem;

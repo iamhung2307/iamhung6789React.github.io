@@ -1,11 +1,16 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import iconTichXanh from '../../assets/img/icon/tichxanhicon.png';
+import { addToCart } from '../../redux/actions/cart';
+import { convertMoney } from '../../utils';
 
 import './products.scss';
 
 export function Product({ product }) {
+  const dispatch = useDispatch();
+
   const addToCartClick = document.querySelector('.addToCartClick');
   // const [newValue,setNewValue] = useState()
   function handleClick() {
@@ -14,18 +19,7 @@ export function Product({ product }) {
       addToCartClick.style.display = 'none';
     }, 3000);
 
-    const localStore = localStorage.getItem('cart');
-    if (localStore) {
-      const json = JSON.parse(localStore);
-      json.push(product);
-      localStorage.setItem('cart', JSON.stringify(json));
-    } else {
-      const json = JSON.stringify([product]);
-      localStorage.setItem('cart', json);
-    }
-  }
-  function convertMoney(num) {
-    return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+    dispatch(addToCart(product, 1));
   }
 
   return (

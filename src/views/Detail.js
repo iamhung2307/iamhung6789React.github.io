@@ -7,6 +7,7 @@ import Banner from '../components/banners';
 import AddToCartButton from '../components/products/AddToCartButton';
 import iconTichXanh from '../assets/img/icon/tichxanhicon.png';
 import { useNavigate } from 'react-router-dom';
+import { getProducts } from '../apis/products';
 
 function Detail() {
   const navigate = useNavigate();
@@ -15,19 +16,17 @@ function Detail() {
 
   const [products, setProducts] = useState([]);
 
-  const getProducts = async (page = 1, pageSize = 20) => {
-    axios
-      .get(`https://demobe.adaptable.app/api/hung/products`, {
-        params: { page, pageSize, product: id },
-      })
-      .then((res) => {
-        const product = res.data.data[0];
-        setProducts(product);
-      })
-      .catch((error) => console.log(error));
+  const getAllProducts = async (page = 1, pageSize = 20) => {
+    try {
+      const res = await getProducts({ page, pageSize, product: id });
+      const product = res.data.data[0];
+      setProducts(product);
+    } catch (err) {
+      console.log(err);
+    }
   };
   useEffect(() => {
-    getProducts();
+    getAllProducts();
   }, []);
   function handleClickViewCart() {
     navigate('/cart');
@@ -66,7 +65,7 @@ function Detail() {
             <button>L</button>
           </div>
           <div className="amount">
-            <input type="number" min="1" defaultValue="1"></input>
+            <input type="number" min="1" defaultValue="1" />
           </div>
           <div className="cart">
             <AddToCartButton products={products} />
