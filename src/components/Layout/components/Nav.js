@@ -35,6 +35,7 @@ function Nav() {
     document.querySelector('.imgMenu').style.display = 'block';
     document.querySelector('.imgMenuClear').style.display = 'none';
   }
+  
   return (
     <>
       <div onClick={handleBgNav} className="bgNav"></div>
@@ -117,16 +118,24 @@ function Nav() {
             <Link to="login">USER</Link>
           </li>
         </ul>
-        <div className="img">
-          <ul className="navCart">
-            <li>
+          <ul >
+            <li className='search'>
+            <script async src="https://cse.google.com/cse.js?cx=c2052da58f6cd42ae">
+            </script>
+            <div class="gcse-search"></div>
+            {/* <script async src="https://cse.google.com/cse.js?cx=500264203cf354af0">
+            </script>
+            <div class="gcse-search"><i class="fa-solid fa-magnifying-glass"></i></div> */}
+              
+            </li>
+            <li className="navCart">
               <Link to="/cart">
-                <img alt="" src={imgCart}></img>
+               <i class="fa-solid fa-cart-shopping"></i>
               </Link>
             </li>
+            <User />
           </ul>
-          <User />
-        </div>
+        
       </div>
     </>
   );

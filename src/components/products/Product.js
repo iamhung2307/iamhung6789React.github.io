@@ -9,7 +9,7 @@ import { convertMoney } from '../../utils';
 import './products.scss';
 
 export function Product({ product }) {
-  console.log(product)
+  // console.log(product)
   const dispatch = useDispatch();
 
   const addToCartClick = document.querySelector('.addToCartClick');
@@ -33,7 +33,7 @@ export function Product({ product }) {
       <div className={['product', product.sex, product.type].join(' ')}>
         <div className="img">
           {product.images.map((image) => {
-            return <img alt="" src={image} style={{ width: '380px' }}></img>;
+            return <img alt="react" src={image} style={{ width: '380px' }}></img>;
           })}
         </div>
 

@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 import CartItem from './cartItem';
 

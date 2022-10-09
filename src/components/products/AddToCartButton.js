@@ -4,7 +4,6 @@ import { addToCart } from '../../redux/actions/cart';
 // import {useState} from 'react'
 function AddToCartButton({ product, quantity = 1 }) {
   const dispatch = useDispatch();
-
   const addToCartClick = document.querySelector('.addToCartClick');
   function handleClick() {
     addToCartClick.style.display = 'block';

@@ -29,6 +29,7 @@ export default function Login() {
     <div className="bgLogin">
       <div className="login">
         <div>
+        
           <img alt="" src={imgLogin}></img>
         </div>
         <div className="detailLogin">
