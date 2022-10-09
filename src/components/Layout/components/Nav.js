@@ -122,10 +122,7 @@ function Nav() {
             <li className='search'>
             <script async src="https://cse.google.com/cse.js?cx=c2052da58f6cd42ae">
             </script>
-            <div class="gcse-search"></div>
-            {/* <script async src="https://cse.google.com/cse.js?cx=500264203cf354af0">
-            </script>
-            <div class="gcse-search"><i class="fa-solid fa-magnifying-glass"></i></div> */}
+            <div class="gcse-search"><i class="fa-solid fa-magnifying-glass"></i></div>
               
             </li>
             <li className="navCart">
