@@ -2,7 +2,7 @@ import axios from 'axios';
 import { stringify } from 'querystring';
 
 export const FetchAPI = async (
-  path,
+  path, 
   method,
   headers,
   body,

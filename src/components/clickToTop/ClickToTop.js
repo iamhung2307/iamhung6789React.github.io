@@ -4,10 +4,17 @@ import imgLogoY from '../../assets/img/icon/logoY.jpg';
 
 export default function ClickToTop() {
   const [moveOnTop, setMoveOnTop] = useState(false);
+  
   useEffect(() => {
     function handleScroll() {
-      setMoveOnTop(window.scrollY > 200);
+      setMoveOnTop(window.scrollY > 200)
+      if(window.scrollY > 200){
+        document.querySelector('.nav').classList.add('background')
+      }else{
+        document.querySelector('.nav').classList.remove('background')
+      }
     }
+
     window.addEventListener('scroll', handleScroll);
     // clean up
     return () => {
@@ -37,8 +44,9 @@ export default function ClickToTop() {
             }}
           ></img>
         </a>
+        
       )}
-      {/* {moveOnTop ? (document.querySelector('.nav').style.background='rgba(1, 1, 1, 0.666)'):(document.querySelector('.nav').style.background='rgba(255, 255, 255, 0.053)')} */}
+      
     </>
   );
 }

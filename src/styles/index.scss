@@ -15,29 +15,29 @@ code {
 }
 
 .nav {
-  .imgMenu,
-  .imgMenuClear {
-    display: none;
-  }
-
   text-align: center;
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: rgba(230, 229, 229, 0.647);
+  background-color: rgba(230, 229, 229, 0.026);
   width: 100%;
-  a:hover {
-    color: black;
+  &.background{
+    background-color: rgba(1, 1, 1, 0.666);
+    
+  }
+  .nav-item{
+    display: none;
+  }
+  .imgMenu,
+  .imgMenuClear {
+    display: none;
   }
   .dropDownChild {
     a {
       color: white;
     }
   }
-  // &:hover{
-  //   background-color: rgba(1, 1, 1, 0.666);
-  // }
-  // display: flex;
+
   img {
     width: 25px;
   }
@@ -123,6 +123,11 @@ code {
   .userLink {
     display: none;
   }
+  li{
+    a{
+      color: white;
+    }
+  }
 }
 .homeProducts {
   text-align: center;
@@ -162,6 +167,7 @@ code {
       }
     }
   }
+
 }
 .homeMore {
   width: 100%;

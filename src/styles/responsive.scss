@@ -9,6 +9,7 @@
         background-color: rgba(145, 151, 149, 0.347);
     }
     .nav{
+        
         a:hover{
             color:white;
         }
@@ -156,6 +157,12 @@
         display: flex;
         flex-wrap: wrap;
         
+    }
+    .dropDown{
+        display: none;
+    }
+    .nav-item{
+        display: block;
     }
     .homeMore{
         height:auto;

@@ -9,6 +9,7 @@ import imgCart from '../../../assets/img/icon/shoppingCart.png';
 import imgNavMenu from '../../../assets/img/icon/menu.png';
 import imgMenuClear from '../../../assets/img/icon/close.png';
 
+// import '../../../styles/responsive.scss'
 function Nav() {
   function handleClickMenu() {
     document.querySelector('.imgMenu').style.display = 'none';
@@ -60,6 +61,12 @@ function Nav() {
         <ul className="navMenu">
           <li>
             <Link to="/products">ALL PRODUCTS</Link>
+          </li>
+          <li className='nav-item'>
+            <Link to="products/women">WOMEN</Link>
+          </li>
+          <li className='nav-item'>
+            <Link to="products/men">MEN</Link>
           </li>
           <li className="dropDown">
             {/* <img alt="" className='imgAdd' onClick={handleClickLink} src={imgAdd}></img> */}

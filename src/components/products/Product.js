@@ -9,6 +9,7 @@ import { convertMoney } from '../../utils';
 import './products.scss';
 
 export function Product({ product }) {
+  console.log(product)
   const dispatch = useDispatch();
 
   const addToCartClick = document.querySelector('.addToCartClick');

@@ -20,9 +20,7 @@ export default function Home() {
       const itemProduct = itemProducts[index];
       span.onclick = function () {
         document.querySelector('.top span.active').classList.remove('active');
-        document
-          .querySelector('.content .itemProduct.active')
-          .classList.remove('active');
+        document.querySelector('.content .itemProduct.active').classList.remove('active');
 
         this.classList.add('active');
         itemProduct.classList.add('active');

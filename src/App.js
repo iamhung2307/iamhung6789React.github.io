@@ -40,7 +40,7 @@ function App() {
         <Route
           path="*"
           element={
-            <div>
+            <div style={{display:'flex',margin:'auto'}}>
               <h2>404 Page not found</h2>
             </div>
           }
