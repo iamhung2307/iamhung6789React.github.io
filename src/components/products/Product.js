@@ -20,7 +20,7 @@ export function Product({ product }) {
       addToCartClick.style.display = 'none';
     }, 3000);
 
-    dispatch(addToCart(product, 1));
+    dispatch(addToCart(product, 1)); 
   }
 
   return (
