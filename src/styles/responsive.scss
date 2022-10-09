@@ -1,0 +1,202 @@
+//mobile
+@media (max-width : 1024px){
+    .bgNav{
+        display: none;
+        width:40%;
+        height:100vh;
+        position: fixed;
+        z-index: 10;
+        background-color: rgba(145, 151, 149, 0.347);
+    }
+    .nav{
+        
+        a:hover{
+            color:white;
+        }
+        &.active{
+            height: 100vh;
+            width:60%;
+            display: block;
+            margin-left: 40%;
+            background-color: rgb(88, 83, 83);
+        }
+        .imgMenu{
+            display: block;
+            cursor: pointer; 
+        }
+        .img,
+        ul:nth-child(3),
+        .imgDropDown{
+            display: none;
+        }
+        .dropDown:hover{
+            
+            .linkDropDown{
+                display: none;
+            }
+        }
+        .imgAdd{
+            cursor: pointer;
+            float: left;
+            width: 15px;
+            margin-top: 5px;
+        }
+        .imgMenuClear{
+            display: none;
+            cursor: pointer;
+            width:20px;
+            position: absolute;
+            top:12px;
+            right:20px;
+        }
+        .cartLink,
+        .userLink{
+            display: block;
+        }
+    }
+    .homeProducts{
+        // display: none;
+        .homeProducts-Women,
+        .homeProducts-Accessories{
+            .left{
+                width:30px;
+                margin-left: 20px;
+            }
+            .right{
+                margin-left: 30px;
+                width:95%;
+            }
+        }
+        .homeProducts-Men{
+            .right{
+                width:30px;
+            }
+        }
+        .homeMore{
+            .homeMore1{
+                section{
+                    flex-wrap:wrap-reverse;
+                }
+            }
+            .homeMore2{
+                section{
+                    flex-wrap: wrap;
+                }
+            }
+            video{
+                // width:50%;
+                // height:50%;
+                margin: auto;
+            }
+        }
+    }
+    .allProducts{
+        display: grid;
+        
+        grid-template-columns: 1fr 1fr 1fr;
+        margin:3px auto;
+        .product{
+            height: 10%;
+
+        }
+    }
+    .noti{
+        width:90%;
+        .notiTop{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .notiBottom{
+            width:100%;
+            margin:20px auto;
+            
+        }
+        
+    }
+    .clickOnTop{
+        display: none;
+    }
+    .banner{
+        height:130px;
+    }
+    .detailCart{
+        display: flex;
+        flex-wrap: wrap;
+        .left{
+            width:100%;
+            margin: auto;
+        }
+        .right{
+            width:100%;
+            margin: auto;
+            margin-top: 30px;
+        }
+    }
+
+}
+@media (max-width:740px){
+    
+    .homeProducts{
+        .homeProducts-Women,
+        .homeProducts-Accessories{
+            .left{
+                display: none;
+            }
+            
+        }
+        .homeProducts-Men{
+            .right{
+                display: none;
+            }
+            .left{
+                width:100%
+            }
+        }
+    }
+    .allProducts{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .dropDown{
+        display: none;
+    }
+    .nav-item{
+        display: block;
+    }
+    .homeMore{
+        height:auto;
+        section{
+            video{
+                width:100%;
+            }
+        }
+        .text{
+            display: none;
+        }
+    }
+    .noti{
+        .notiBottom{
+            img{
+                margin: auto;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            input{
+                width:100%;
+            }
+        }
+    }
+    .footer{
+        width:100%;
+        justify-content:center;
+        video{
+            display:none;
+
+        }
+        .right{
+            width:100%;
+            margin: auto 16% auto 0;
+        }
+    }
+}

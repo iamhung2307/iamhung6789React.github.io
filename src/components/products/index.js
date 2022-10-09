@@ -1,34 +1,35 @@
-import React, { useState, useEffect } from "react";
-import Banner from "../banner";
-import axios from "axios";
-import {Product} from "./Product";
-// import Cart from "../cart/Cart";
-export function AllProducts() {
+import React, { useState, useEffect } from 'react';
+import Banner from '../banners';
+
+import { Product } from './Product';
+import { getProducts } from '../../apis/products';
+
+export function AllProducts({ category, limit }) {
   const [products, setProducts] = useState([]);
 
-  const getProducts = async (page = 1, pageSize = 20) => {
-    
-    axios.get(`https://demobe.adaptable.app/api/hung/products`, {
-        params: { page, pageSize }
-      })
-      .then((res) => {
+  const getAllProducts = async (page = 1, pageSize = 20) => {
+    try {
+      const res = await getProducts({ page, pageSize, gender: category });
+      if (res.data?.data) {
         const product = res.data.data;
         setProducts(product);
-      })
-      .catch((error) => console.log(error));
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
+
   useEffect(() => {
-    getProducts();
+    getAllProducts(1, limit);
   }, []);
-  
+
   return (
     <>
-      <Banner/>
+      <Banner title={category} />
       <div className="allProducts">
-      {products.map((product) => (
-        <Product product={product} />
-        
-      ))}
+        {products.map((product) => (
+          <Product product={product} />
+        ))}
       </div>
     </>
   );
