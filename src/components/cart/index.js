@@ -20,7 +20,9 @@ function Cart() {
   );
 
   return (
-    <div className="detailCart">
+    <>
+    <div className='bgTop'></div>
+      <div className="detailCart">
       <div className="left">
         {products.length === 0 && (
           <div className="cartNull">
@@ -53,6 +55,7 @@ function Cart() {
         </div>
       )}
     </div>
+    </>
   );
 }
 

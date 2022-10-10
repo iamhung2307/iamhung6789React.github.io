@@ -185,10 +185,12 @@
 }
 
 //
-.bgTOP {
+.bgTop {
   width: 100%;
   height: 45px;
   background-color: black;
+  position: fixed;
+  top:0;
 }
 // CART
 .detailCart {
