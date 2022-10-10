@@ -1,3 +1,10 @@
+//PC
+@media (min-width : 1024px){
+    .imgMenu,
+    .imgMenuClear{
+        display: none;
+    }
+}
 //mobile
 @media (max-width : 1024px){
     .bgNav{
@@ -27,9 +34,9 @@
                 display: block;
             }
             .nav-right{
-                display: block;
+                display: flex;
+                justify-content: center;
             }
-            
         }
         .dropDown{
             display: none;

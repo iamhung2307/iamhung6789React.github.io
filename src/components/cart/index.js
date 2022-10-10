@@ -6,6 +6,7 @@ import CartItem from './cartItem';
 import { convertMoney } from '../../utils';
 import { useSelector } from 'react-redux';
 
+import imgCartNull from '../../assets/img/products/banner/imgCartNull.png'
 function Cart() {
   const products = useSelector((store) => store.cart);
 
@@ -26,7 +27,8 @@ function Cart() {
       <div className="left">
         {products.length === 0 && (
           <div className="cartNull">
-            <h1>ố Ồ...chưa có gì ở đây cả</h1>
+            <img src={imgCartNull}></img>
+            <p className='textCartNull'>Giỏ hàng của bạn đang trống...</p>
           </div>
         )}
 

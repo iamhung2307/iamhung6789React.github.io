@@ -5,11 +5,7 @@ import User from '../../user/User';
 import imgWomen from '../../../assets/img/products/women/sweaters/Blvck Letters Sweater.webp';
 import imgMen from '../../../assets/img/products/men/shirts/Blvck Nylon Shirt 1.webp';
 import imgAcc from '../../../assets/img/products/accessories/Blvck Drawing Pad.webp';
-import imgCart from '../../../assets/img/icon/shoppingCart.png';
-import imgNavMenu from '../../../assets/img/icon/menu.png';
-import imgMenuClear from '../../../assets/img/icon/close.png';
 
-// import '../../../styles/responsive.scss'
 function Nav() {
   function handleClickMenu() {
     document.querySelector('.imgMenu').style.display = 'none';
@@ -46,18 +42,19 @@ function Nav() {
           </li>
         </ul>
         <ul>
-          <img
-            alt=""
+          <div
             className="imgMenu"
             onClick={handleClickMenu}
-            src={imgNavMenu}
-          ></img>
-          <img
-            alt=""
+          >
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div
             className="imgMenuClear"
             onClick={handleClickMenuClear}
-            src={imgMenuClear}
-          ></img>
+            
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
         </ul>
         <ul className="navMenu">
           <li>
@@ -74,13 +71,13 @@ function Nav() {
             <Link to="products/women">WOMEN</Link>
             <div className="dropDownChild">
               <ul className="linkDropDown">
-                <Link to="products/hoodies">HOODIES</Link>
-                <Link to="products/sweaters">SWEATERS</Link>
-                <Link to="products/jackets">JACKETS</Link>
-                <Link to="products/pants">PANTS</Link>
-                <Link to="products/croped">CROPED</Link>
-                <Link to="products/blaze">BLAZES</Link>
-                <Link to="products/tees">TEES</Link>
+                <Link to="products/women/hoodies">HOODIES</Link>
+                <Link to="products/women/sweaters">SWEATERS</Link>
+                <Link to="products/women/jackets">JACKETS</Link>
+                <Link to="products/women/pants">PANTS</Link>
+                <Link to="products/women/croped">CROPED</Link>
+                <Link to="products/women/blaze">BLAZES</Link>
+                <Link to="products/women/tees">TEES</Link>
               </ul>
               <div className="imgDropDown">
                 <img alt="" src={imgWomen}></img>
@@ -93,11 +90,11 @@ function Nav() {
             <Link to="products/men">MEN</Link>
             <div className="dropDownChild">
               <ul className="linkDropDown">
-                <Link to="products/hoodies">HOODIES</Link>
-                <Link to="products/sweaters">SWEATERS</Link>
-                <Link to="products/jackets">JACKETS</Link>
-                <Link to="products/pants">PANTS</Link>
-                <Link to="products/tees">TEES</Link>
+                <Link to="products/men/hoodies">HOODIES</Link>
+                <Link to="products/men/sweaters">SWEATERS</Link>
+                <Link to="products/men/jackets">JACKETS</Link>
+                <Link to="products/men/pants">PANTS</Link>
+                <Link to="products/men/tees">TEES</Link>
               </ul>
               <div className="imgDropDown">
                 <img alt="" src={imgMen}></img>
@@ -109,7 +106,7 @@ function Nav() {
             <Link to="products/accessories">ACCESSORIES</Link>
           </li>
           <li>
-            <Link to="products/contact">CONTACT</Link>
+            <Link to="contact">CONTACT</Link>
           </li>
    
         </ul>

@@ -7,8 +7,8 @@ export default function ClickToTop() {
   
   useEffect(() => {
     function handleScroll() {
-      setMoveOnTop(window.scrollY > 200)
-      if(window.scrollY > 200){
+      setMoveOnTop(window.scrollY > 550)
+      if(window.scrollY > 50){
         document.querySelector('.nav').classList.add('background')
       }else{
         document.querySelector('.nav').classList.remove('background')

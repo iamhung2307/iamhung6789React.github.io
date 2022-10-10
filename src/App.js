@@ -21,7 +21,15 @@ function App() {
           path="/products/women"
           exact
           element={<AllProducts key="women" category="women" />}
-        ></Route>
+        >
+        </Route>
+        <Route path="/products/women/hoodies" exact element={<AllProducts key="hoodie" category="hoodie" />}></Route>
+        <Route path="/products/women/sweaters" exact element={<AllProducts key="sweater" category="sweater" />}></Route>
+        <Route path="/products/women/jackets" exact element={<AllProducts key="jacket" category="jacket" />}></Route>
+        <Route path="/products/women/pants" exact element={<AllProducts key="pant" category="pant" />}></Route>
+        <Route path="/products/women/croped" exact element={<AllProducts key="croped" category="croped" />}></Route>
+        <Route path="/products/women/blaze" exact element={<AllProducts key="blaze" category="blaze" />}></Route>
+        <Route path="/products/women/tees" exact element={<AllProducts key="tee" category="tee" />}></Route>
         <Route
           path="/products/men"
           exact
@@ -32,7 +40,7 @@ function App() {
           exact
           element={<AllProducts key="accessories" category="accessories" />}
         ></Route>
-        <Route path="/products/contact" element={<Contact />}></Route>
+        <Route path="contact" element={<Contact />}></Route>
         <Route path="/products/:name/:id" exact element={<Detail />}></Route>
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />}></Route>
