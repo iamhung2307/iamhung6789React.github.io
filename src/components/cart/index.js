@@ -27,7 +27,7 @@ function Cart() {
       <div className="left">
         {products.length === 0 && (
           <div className="cartNull">
-            <img src={imgCartNull}></img>
+            {/* <img src={imgCartNull}></img> */}
             <p className='textCartNull'>Giỏ hàng của bạn đang trống...</p>
           </div>
         )}

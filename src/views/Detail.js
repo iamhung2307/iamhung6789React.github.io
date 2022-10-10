@@ -60,9 +60,9 @@ function Detail() {
           <h1>{products.name}</h1>
           <h3>{products.price}</h3>
           <div className="size">
-            <button>S</button>
-            <button>M</button>
-            <button>L</button>
+            <button value={'s'}>S</button>
+            <button value={'m'}>M</button>
+            <button value={'l'}>L</button>
           </div>
           <div className="amount">
             <input type="number" min="1" defaultValue="1" />
