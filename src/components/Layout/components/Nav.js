@@ -111,14 +111,9 @@ function Nav() {
           <li>
             <Link to="products/contact">CONTACT</Link>
           </li>
-          <li className="cartLink">
-            <Link to="cart">CART</Link>
-          </li>
-          <li className="userLink">
-            <Link to="login">USER</Link>
-          </li>
+   
         </ul>
-          <ul >
+          <ul className='nav-right'>
             <li className='search'>
             <script async src="https://cse.google.com/cse.js?cx=c2052da58f6cd42ae">
             </script>

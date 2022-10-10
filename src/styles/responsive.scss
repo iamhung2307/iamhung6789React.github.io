@@ -13,17 +13,33 @@
         a:hover{
             color:white;
         }
+        
+        .nav-right{
+            display: none;
+        }
         &.active{
             height: 100vh;
             width:60%;
             display: block;
             margin-left: 40%;
             background-color: rgb(88, 83, 83);
+            .nav-item{
+                display: block;
+            }
+            .nav-right{
+                display: block;
+            }
+            
+        }
+        .dropDown{
+            display: none;
         }
         .imgMenu{
             display: block;
-            cursor: pointer; 
+            cursor: pointer;
+            
         }
+        
         .img,
         ul:nth-child(3),
         .imgDropDown{
@@ -48,10 +64,6 @@
             position: absolute;
             top:12px;
             right:20px;
-        }
-        .cartLink,
-        .userLink{
-            display: block;
         }
     }
     .homeProducts{
@@ -158,12 +170,8 @@
         flex-wrap: wrap;
         
     }
-    .dropDown{
-        display: none;
-    }
-    .nav-item{
-        display: block;
-    }
+    
+
     .homeMore{
         height:auto;
         section{
