@@ -6,7 +6,7 @@ import CartItem from './cartItem';
 import { convertMoney } from '../../utils';
 import { useSelector } from 'react-redux';
 
-import imgCartNull from '../../assets/img/products/banner/imgCartNull.png'
+// import imgCartNull from '../../assets/img/products/banner/imgCartNull.png'
 function Cart() {
   const products = useSelector((store) => store.cart);
 

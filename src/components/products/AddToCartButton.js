@@ -10,7 +10,7 @@ function AddToCartButton({ product, quantity = 1 }) {
     setTimeout(() => {
       addToCartClick.style.display = 'none';
     }, 3000);
-
+    
     dispatch(addToCart(product, quantity));
   }
 

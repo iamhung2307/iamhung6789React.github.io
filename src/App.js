@@ -41,7 +41,7 @@ function App() {
           element={<AllProducts key="accessories" category="accessories" />}
         ></Route>
         <Route path="contact" element={<Contact />}></Route>
-        <Route path="/products/:name/:id" exact element={<Detail />}></Route>
+        <Route path="/products/:name/:id" exact category="Detail Product" element={<Detail />}></Route>
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>

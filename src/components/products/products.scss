@@ -73,7 +73,7 @@
     }
   }
 }
-// Detail
+// Detail Products
 
 .productDetail {
   display: flex;
@@ -116,7 +116,12 @@
       button {
         padding: 10px 20px;
         margin: 3px;
+        &.active{
+          background-color: black;
+          color:white;
+        }
       }
+
     }
     .cart {
       display: flex;

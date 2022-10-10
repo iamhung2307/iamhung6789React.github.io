@@ -1,6 +1,6 @@
 import React from 'react';
 // import Banner from "../banner";
-import axios from 'axios';
+// import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Banner from '../components/banners';
@@ -31,6 +31,17 @@ function Detail() {
   function handleClickViewCart() {
     navigate('/cart');
   }
+  
+  const sizes = document.querySelectorAll('.size button')
+  sizes.forEach((size)=>{
+    size.onclick = function() {
+      if(document.querySelector('.size button.active')){
+        document.querySelector('.size button.active').classList.remove('active')
+      }
+      this.classList.add('active')
+    }
+  })
+
   return (
     <>
       <Banner />
@@ -60,9 +71,9 @@ function Detail() {
           <h1>{products.name}</h1>
           <h3>{products.price}</h3>
           <div className="size">
-            <button value={'s'}>S</button>
-            <button value={'m'}>M</button>
-            <button value={'l'}>L</button>
+            <button value={'S'}>S</button>
+            <button value={'M'}>M</button>
+            <button value={'L'}>L</button>
           </div>
           <div className="amount">
             <input type="number" min="1" defaultValue="1" />
