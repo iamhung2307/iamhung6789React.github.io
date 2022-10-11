@@ -5,8 +5,8 @@ import {
   changeCartQuantity,
   deleteCartProduct,
 } from '../../redux/actions/cart';
-import { convertMoney } from '../../utils';
 
+import { convertMoney } from '../../utils';
 import imgClose from '../../assets/img/icon/close.png';
 
 function CartItem({ product }) {

@@ -1,6 +1,4 @@
 import React from 'react';
-// import Banner from "../banner";
-// import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Banner from '../components/banners';
@@ -12,35 +10,28 @@ import { getProducts } from '../apis/products';
 function Detail() {
   const navigate = useNavigate();
   const { id } = useParams();
-  // const Id = id * 1
 
   const [products, setProducts] = useState([]);
-
+  console.log(products)
   const getAllProducts = async (page = 1, pageSize = 20) => {
     try {
       const res = await getProducts({ page, pageSize, product: id });
       const product = res.data.data[0];
       setProducts(product);
+      
     } catch (err) {
       console.log(err);
     }
   };
   useEffect(() => {
     getAllProducts();
+
   }, []);
   function handleClickViewCart() {
     navigate('/cart');
   }
-  
-  const sizes = document.querySelectorAll('.size button')
-  sizes.forEach((size)=>{
-    size.onclick = function() {
-      if(document.querySelector('.size button.active')){
-        document.querySelector('.size button.active').classList.remove('active')
-      }
-      this.classList.add('active')
-    }
-  })
+    
+
 
   return (
     <>

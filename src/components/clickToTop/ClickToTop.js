@@ -26,7 +26,7 @@ export default function ClickToTop() {
       {moveOnTop && (
         <a
           className="clickOnTop"
-          href="/#"
+          href="#"
           style={{
             position: 'fixed',
             bottom: '20px',

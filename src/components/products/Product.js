@@ -18,16 +18,18 @@ export function Product({ product }) {
     addToCartClick.style.display = 'block';
     setTimeout(() => {
       addToCartClick.style.display = 'none';
-    }, 3000);
+    }, 2000);
 
     dispatch(addToCart(product, 1)); 
   }
+  const products = ({...product})
+  console.log(products)
 
   return (
     <>
       <div className="addToCartClick">
         <h5>
-          {product.name} <img alt="" src={iconTichXanh}></img>
+          ADD TO CART SUCCESSFULLY <img alt="" src={iconTichXanh}></img>
         </h5>
       </div>
       <div className={['product', product.sex, product.type].join(' ')}>

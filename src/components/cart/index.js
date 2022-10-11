@@ -1,25 +1,56 @@
 // import { useState } from "react";
 // import { useEffect, useState } from 'react';
-
+import {Link} from 'react-router-dom'
 import CartItem from './cartItem';
 
 import { convertMoney } from '../../utils';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 // import imgCartNull from '../../assets/img/products/banner/imgCartNull.png'
 function Cart() {
+  
   const products = useSelector((store) => store.cart);
-
-  function handleClickBuy() {
-    alert('Order Success !!! Thanks bro ');
+  // console.log(products)
+  const [firstName,setFirstName] = useState('')
+  const [lastName,setLastName] = useState('')
+  const [phoneNumber,setPhoneNumber] = useState()
+  const [address,setAddress] = useState('')
+ 
+  function handleFirstName(e){
+   setFirstName(e.target.value)
   }
+  function handleLastName(e){
+    setLastName(e.target.value)
+  }
+  function handlePhoneNumber(e){
+    setPhoneNumber(e.target.value)
+  }
+  function handleAddress(e){
+    setAddress(e.target.value)
+  }
+   
+  function handleClickBuy() {
+    if(firstName == null || lastName == null || address == null || phoneNumber == null){
+      alert('Complete all information, please')
+    }else if(!(Number(phoneNumber))){
+      alert('Check Your Phone Number, please')
+    }else{
+      document.querySelector('.order-confirmation').style.display = 'block'
+    }
+  }
+  function handleBackToCart(){
+    document.querySelector('.order-confirmation').style.display = 'none'
 
+  }
   const totals = products.reduce(
     (accumulator, currentValue) =>
       accumulator + currentValue.price * currentValue.order_quantity,
     0
   );
-
+  function handleClickBuyCart(){
+    alert("Thank you for your order. We will contact you soon, Let's keep in touch, pls !!!")
+  }
   return (
     <>
     <div className='bgTop'></div>
@@ -40,11 +71,12 @@ function Cart() {
         <div className="right">
           <h1>SHOPPING CART</h1>
           <div className="infoUserCart">
-            <input placeholder="FIRST NAME" />
-            <input placeholder="LAST NAME" />
-            <input placeholder="YOUR PHONE NUMBER" />
-            <input placeholder="ADDRESS" />
-            <input placeholder="NOTE" />
+
+            <input defaultValue={firstName} onChange={handleFirstName} placeholder="FIRST NAME" />
+            <input defaultValue={lastName} onChange={handleLastName} placeholder="LAST NAME" />
+            <input defaultValue={phoneNumber} onChange={handlePhoneNumber} placeholder="YOUR PHONE NUMBER" />
+            <input defaultValue={address} onChange={handleAddress} placeholder="ADDRESS" />
+            <input placeholder="NOTE"></input>
           </div>
           <div className="total">
             <div className="totalPrices">
@@ -56,6 +88,38 @@ function Cart() {
           </div>
         </div>
       )}
+    </div>
+    <div className='order-confirmation' >
+      
+        <div className='content-confirm'>
+        
+          <div className='left'>
+          
+            <div>
+              <p>Name : {`${firstName} ${lastName}`}</p>
+              <p> Phone Number : {phoneNumber}</p>
+              <p>Address : {address}</p>
+              <p >Total Price : {convertMoney(totals)}</p>
+            </div>
+          </div>
+          <div className='right'>
+            <div className='top'>
+              <p className='Title'>Order confirmation</p>
+            </div>
+            <div className='bottom'>
+              <div>
+                <input type='radio'></input>
+                <p>thanh toán khi nhận hàng</p>
+              </div>
+              <div>
+                <input type='radio'></input>
+                <p>thanh toán bằng thẻ</p>
+              </div>
+              <Link to='#' onClick={handleBackToCart}>Back to Cart</Link>
+              <button onClick={handleClickBuyCart}>Buy Now</button>
+            </div>
+          </div>
+        </div>
     </div>
     </>
   );
