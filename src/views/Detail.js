@@ -1,18 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 import Banner from '../components/banners';
 import AddToCartButton from '../components/products/AddToCartButton';
-import iconTichXanh from '../assets/img/icon/tichxanhicon.png';
-import { useNavigate } from 'react-router-dom';
 import { getProducts } from '../apis/products';
+
+// img
+import iconTichXanh from '../assets/img/icon/tichxanhicon.png';
 
 function Detail() {
   const navigate = useNavigate();
   const { id } = useParams();
 
   const [products, setProducts] = useState([]);
-  console.log(products)
+  // console.log(products)
   const getAllProducts = async (page = 1, pageSize = 20) => {
     try {
       const res = await getProducts({ page, pageSize, product: id });
@@ -30,8 +31,10 @@ function Detail() {
   function handleClickViewCart() {
     navigate('/cart');
   }
-    
+  
 
+
+  
 
   return (
     <>
@@ -62,7 +65,7 @@ function Detail() {
           <h1>{products.name}</h1>
           <h3>{products.price}</h3>
           <div className="size">
-            <button value={'S'}>S</button>
+            <button className='active' value={'S'}>S</button>
             <button value={'M'}>M</button>
             <button value={'L'}>L</button>
           </div>

@@ -26,7 +26,7 @@ function CartItem({ product }) {
           <h5>{product.name}</h5>
           
           <h6 className="totalPrice">
-            {convertMoney(product.price * product.order_quantity)}
+            {`${product.size} / ${convertMoney(product.price * product.order_quantity)}`}
           </h6>
           <div>
             <input

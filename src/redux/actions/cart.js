@@ -1,5 +1,5 @@
-export const addToCart = (product = {}, order_quantity = 1) => {
-  return { type: 'add_to_cart', product: { ...product, order_quantity } };
+export const addToCart = (product = {}, order_quantity = 1,size = 'S') => {
+  return { type: 'add_to_cart', product: { ...product, order_quantity,size } };
 };
 
 export const changeCartQuantity = (proId, order_quantity) => {

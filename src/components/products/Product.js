@@ -22,8 +22,8 @@ export function Product({ product }) {
 
     dispatch(addToCart(product, 1)); 
   }
-  const products = ({...product})
-  console.log(products)
+  // const products = ({...product})
+  // console.log(products)
 
   return (
     <>
