@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams,useNavigate } from 'react-router-dom';
-import Banner from '../components/banners';
+// import Banner from '../components/banners';
 import AddToCartButton from '../components/products/AddToCartButton';
 import { getProducts } from '../apis/products';
 import { convertMoney } from '../utils';
@@ -35,13 +35,14 @@ function Detail() {
   // console.log(products)
   return (
     <>
-      <Banner />
-      <div className="addToCartClick">
+      {/* <Banner /> */}
+      <div className='bgTop'></div>
+      <div className="addToCartClick" >
         <h5>
           {products.name} <img alt="" src={iconTichXanh}></img>
         </h5>
       </div>
-      <div className="productDetail" key={products.id}>
+      <div className="productDetail" key={products.id} style={{marginTop:'100px'}}>
         <div className="imgDetail">
           <div className="img1">
             <img alt="" src={products.images}></img>
@@ -62,9 +63,10 @@ function Detail() {
           <h1>{products.name}</h1>
           <h3>{products.price?convertMoney(products.price):null}</h3>
           <div className="size">
-            <button className='active' value={'S'}>S</button>
+            <button value={'S'}>S</button>
             <button value={'M'}>M</button>
             <button value={'L'}>L</button>
+            <p className='textChooseSize' style={{display:'none',color:'red'}}>*Please choose size</p>
           </div>
           <div className="amount">
             <input type="number" min="1" defaultValue="1" />
