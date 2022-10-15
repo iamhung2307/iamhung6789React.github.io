@@ -6,7 +6,7 @@ const cartReducer = (state = initCart, action) => {
       const oldCart = [...state];
       // trường hợp sản phẩm đã có trong giỏ hàng => tăng số lượng sản phẩm
       if (
-        oldCart.find((productInCart) => productInCart.id === action.product?.id)
+        oldCart.find((productInCart) => productInCart.id === action.product?.id || productInCart.size == action.product?.size)
       ) {
         // tìm sản phẩm trong mảng
         const indexOfProduct = oldCart.findIndex(

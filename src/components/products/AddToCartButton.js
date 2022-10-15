@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/actions/cart';
 // import {useState} from 'react'
-function AddToCartButton({ product, quantity = 1 }) {
+function AddToCartButton({ products, quantity = 1 }) {
   const [size,setSize] = useState('S');
   const dispatch = useDispatch();
   const addToCartClick = document.querySelector('.addToCartClick');
@@ -11,7 +11,9 @@ function AddToCartButton({ product, quantity = 1 }) {
     setTimeout(() => {
       addToCartClick.style.display = 'none';
     }, 2000);
-    dispatch(addToCart(product, quantity,size));
+    if(products){
+      dispatch(addToCart(products, quantity,size));
+    }
   }
   document.querySelectorAll('.size button').forEach((size)=>{
     size.onclick = function() {

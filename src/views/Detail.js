@@ -4,7 +4,7 @@ import { useParams,useNavigate } from 'react-router-dom';
 import Banner from '../components/banners';
 import AddToCartButton from '../components/products/AddToCartButton';
 import { getProducts } from '../apis/products';
-
+import { convertMoney } from '../utils';
 // img
 import iconTichXanh from '../assets/img/icon/tichxanhicon.png';
 
@@ -31,11 +31,8 @@ function Detail() {
   function handleClickViewCart() {
     navigate('/cart');
   }
-  
-
-
-  
-
+    
+  // console.log(products)
   return (
     <>
       <Banner />
@@ -63,7 +60,7 @@ function Detail() {
         </div>
         <div className="contentDetail">
           <h1>{products.name}</h1>
-          <h3>{products.price}</h3>
+          <h3>{products.price?convertMoney(products.price):null}</h3>
           <div className="size">
             <button className='active' value={'S'}>S</button>
             <button value={'M'}>M</button>
