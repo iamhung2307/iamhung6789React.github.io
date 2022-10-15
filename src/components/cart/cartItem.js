@@ -7,7 +7,8 @@ import {
 } from '../../redux/actions/cart';
 
 import { convertMoney } from '../../utils';
-import imgClose from '../../assets/img/icon/close.png';
+// import imgClose from '../../assets/img/icon/close.png';
+
 
 function CartItem({ product }) {
   const dispatch = useDispatch();
@@ -41,7 +42,8 @@ function CartItem({ product }) {
         </div>
       </div>
       <div className="imgClose">
-        <img alt="" src={imgClose} onClick={handleRemoveProduct}></img>
+        <i class="fa-solid fa-xmark" onClick={handleRemoveProduct}></i>
+        {/* <img alt="" src={imgClose} onClick={handleRemoveProduct}></img> */}
       </div>
     </div>
   );

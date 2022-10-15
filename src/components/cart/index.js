@@ -7,7 +7,11 @@ import { convertMoney } from '../../utils';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
-// import imgCartNull from '../../assets/img/products/banner/imgCartNull.png'
+// imgages Pay
+import imgMomo from '../../assets/img/icon/logoMomo.svg'
+import imgZaloPay from '../../assets/img/icon/logoZaloPay.svg'
+import imgVNPay from '../../assets/img/icon/logoVNPay.svg'
+import imgQrMomo from '../../assets/img/icon/logoMomo.svg'
 function Cart() {
   
   const products = useSelector((store) => store.cart);
@@ -101,12 +105,15 @@ function Cart() {
               <p>Address : {address}</p>
               <p >Total Price : {convertMoney(totals)}</p>
             </div>
+            <Link to='#' onClick={handleBackToCart}>Back to Cart</Link>
           </div>
           <div className='right'>
             <div className='top'>
               <p className='Title'>Order confirmation</p>
             </div>
             <div className='bottom'>
+            <div className='pay'>
+              <h6>Thanh Toán</h6>
               <div>
                 <input type='radio'></input>
                 <p>thanh toán khi nhận hàng</p>
@@ -115,7 +122,16 @@ function Cart() {
                 <input type='radio'></input>
                 <p>thanh toán bằng thẻ</p>
               </div>
-              <Link to='#' onClick={handleBackToCart}>Back to Cart</Link>
+              <div className='imgPay'>
+                <img src={imgMomo}></img>
+                <img src={imgZaloPay}></img>
+                <img src={imgVNPay}></img>
+              </div>
+            </div>
+            <div className='checkPay'>
+              {/* <img alt='QR Code Momo' src={imgQrMomo}></img> */}
+              <p>nơi chứa thông tin thanh toán</p>
+            </div>  
               <button onClick={handleClickBuyCart}>Buy Now</button>
             </div>
           </div>
