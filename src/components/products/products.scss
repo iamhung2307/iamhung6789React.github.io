@@ -265,10 +265,10 @@
       }
     }
     .imgClose {
-      img {
-        width: 18px;
-        margin: 20px 20px;
+      .fa-solid{
         cursor: pointer;
+        // width:100px;
+        // height:100px;
       }
     }
   }
@@ -390,7 +390,7 @@
             }
           }
           .imgPay{
-            display: flex;
+            display: none;
             
             img:first-child{
               width:50px;
@@ -412,12 +412,26 @@
           top:220px;
           width:340px;
           height:260px;
+          p{
+            margin-top: 10px;
+            color:red;
+            font-weight: 500;
+          }
+          img{
+
+            width:60%;
+            display:none;
+            &.active{
+              display: block;
+            }
+          }
+          
         }
         
         button {
-          display: flex;
-          float: right;
-          margin: 180px 30px 0 0;
+          position:fixed;
+          top:425px;
+          right:30px;
           border: none;
           background-color: black;
           color: white;
