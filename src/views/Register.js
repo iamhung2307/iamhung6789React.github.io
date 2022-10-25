@@ -29,6 +29,7 @@ export default function Register() {
 
   return (
     <div className="bgLogin">
+      <div className='margin'>
       <div className="login">
         <div>
           <img alt="" src={imgLogin}></img>
@@ -57,6 +58,7 @@ export default function Register() {
           <button onClick={handleSignUp}>SUBMIT</button>
           <Link to="/login">Sign in</Link>
         </div>
+      </div>
       </div>
     </div>
   );

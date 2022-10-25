@@ -57,10 +57,11 @@ function Contact() {
             <input type="text" placeholder="Write your message here"></input>
           </div>
           <button>SEND</button>
+          <div className="imgBot">
+            <img alt="" src={imgContact}></img>
+          </div>
         </div>
-        <div className="imgBot">
-          <img alt="" src={imgContact}></img>
-        </div>
+        
       </div>
     </div>
   );

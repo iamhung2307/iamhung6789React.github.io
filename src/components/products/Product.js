@@ -35,7 +35,7 @@ export function Product({ product }) {
       <div className={['product', product.sex, product.type].join(' ')}>
         <div className="img">
           {product.images.map((image) => {
-            return <img alt="react" src={image} style={{ width: '380px' }}></img>;
+            return <img alt="react" src={image}></img>;
           })}
         </div>
 

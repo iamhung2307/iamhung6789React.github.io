@@ -318,9 +318,9 @@ code {
   }
 }
 
-//
+// login Page
 .bgLogin {
-  position: relative;
+  
   width:100%;
   height: 100vh;
   background-image: linear-gradient(
@@ -328,52 +328,62 @@ code {
     rgb(3, 186, 180),
     rgba(38, 199, 105, 0.881)
   );
-}
-.login {
-  position: absolute;
-  top: 200px;
-  left: 20%;
-  border-radius: 10px;
-  width: 60%;
-  display: flex;
-  background-color: rgba(246, 246, 246, 0.084);
-  box-shadow: 1px 2px 18px rgba(28, 28, 28, 0.512);
-  a {
-    text-decoration: none;
-    color: black;
-    &:hover {
-      color: white;
-    }
+  .margin{
+    position: absolute;
+    top: 120px;
+    left:0;
+    right:0;
   }
-  .detailLogin,
-  .detailSignUp {
-    margin-top: 100px;
-    text-align: center;
-    width: 100%;
-    h3 {
+  .login {
+    display: flex;
+    border-radius: 10px;
+    width: 70%;
+    margin:0 auto; 
+    background-color: rgba(246, 246, 246, 0.084);
+    box-shadow: 1px 2px 18px rgba(28, 28, 28, 0.512);
+    a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        color: white;
+      }
+    }
+    img{
+      width:110%;
+      margin: 20% auto;
+    }
+    .detailLogin,
+    .detailSignUp {
+      margin-top: 100px;
       text-align: center;
-      height: 40px;
-    }
-    input {
-      width: 60%;
-      margin: 20px 20%;
-      padding: 10px 15px;
-      border: 0;
-      outline: none;
-      border-bottom: 2px solid;
-      background-color: rgba(90, 92, 92, 0);
-      color: rgb(255, 255, 255);
-    }
-    button {
-      border: 0;
-      outline: none;
-      width: 50%;
-      margin: 20px 25%;
-      padding: 10px;
-      border-radius: 10px;
+      width: 100%;
+      
+      h3 {
+        text-align: center;
+        height: 40px;
+      }
+      input {
+        width: 60%;
+        margin: 20px 20%;
+        padding: 10px 15px;
+        border: 0;
+        outline: none;
+        border-bottom: 2px solid;
+        background-color: rgba(90, 92, 92, 0);
+        color: rgb(255, 255, 255);
+      }
+      button {
+        border: 0;
+        outline: none;
+        width: 40%;
+        margin: 15px 30%;
+        padding: 10px;
+        border-radius: 10px;
+      }
     }
   }
 }
+
 
 //scroll 
 /* width */

@@ -79,10 +79,10 @@
         .homeProducts-Accessories{
             .left{
                 width:30px;
-                margin-left: 20px;
+                // margin-left: 20px;
             }
             .right{
-                margin-left: 30px;
+                // margin-left: 30px;
                 width:95%;
             }
         }
@@ -111,7 +111,6 @@
     }
     .allProducts{
         display: grid;
-        
         grid-template-columns: 1fr 1fr 1fr;
         margin:3px auto;
         .product{
@@ -151,7 +150,20 @@
             margin-top: 30px;
         }
     }
-
+    // login Page
+    .margin{
+        .login{
+            display: flex;
+            width: 90%;
+            .detailLogin,
+            .detailSignUp {
+                margin-top: 70px;
+            }
+        }
+        img{
+            width:90%;
+        }
+    }
 }
 @media (max-width:740px){
     
@@ -200,6 +212,22 @@
             input{
                 width:100%;
             }
+        }
+    }
+    // login Page
+    .margin{
+        .login{
+            width: 80%;
+            .detailLogin,
+            .detailSignUp {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            // min-height: 70%;
+        }
+        
+        img{
+            display: none;
         }
     }
     .footer{

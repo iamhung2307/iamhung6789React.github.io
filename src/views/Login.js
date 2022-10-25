@@ -27,6 +27,7 @@ export default function Login() {
   }
   return (
     <div className="bgLogin">
+      <div className='margin'>
       <div className="login">
         <div>
         
@@ -52,6 +53,7 @@ export default function Login() {
           </Link>
           <Link to="/register">Sign up</Link>
         </div>
+      </div>
       </div>
     </div>
   );
