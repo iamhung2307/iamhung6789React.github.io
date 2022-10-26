@@ -146,10 +146,15 @@ code {
   color: black;
   .allProducts {
     display: flex;
-    justify-content:center;
-    // grid-template-columns: 1fr 1fr 1fr;
-    width: 80%;
+    justify-content: center;
     margin: 0 auto;
+    .product{
+      .img{
+        img{
+          width:350px;
+        }
+      }
+    }
   }
   .banner {
     display: none;
