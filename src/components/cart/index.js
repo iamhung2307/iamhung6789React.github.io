@@ -132,7 +132,8 @@ function Cart() {
             })}
           </div>
           {products.length !== 0 && (
-            <div className="right">
+            <>
+              <div className="right">
               <h1>SHOPPING CART</h1>
               <div className="infoUserCart">
 
@@ -148,9 +149,14 @@ function Cart() {
                     TOTAL PRICE : <span>{convertMoney(totals)}</span>
                   </p>
                 </div>
+                
                 <button onClick={handleClickBuy}>BUY NOW</button>
+                
               </div>
+              
             </div>
+            
+            </>
           )}
         </div>
       <div className='order-confirmation' >
