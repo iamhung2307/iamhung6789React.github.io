@@ -15,7 +15,10 @@ export function Product({ product }) {
   const addToCartClick = document.querySelector('.addToCartClick');
   // const [newValue,setNewValue] = useState()
   function handleClick() {
-    if(product !== null){
+    if(product == null){
+      console.log('null')
+    }else{
+      
       addToCartClick.style.display = 'block';
       setTimeout(() => {
         addToCartClick.style.display = 'none';
