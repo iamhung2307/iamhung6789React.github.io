@@ -15,12 +15,15 @@ export function Product({ product }) {
   const addToCartClick = document.querySelector('.addToCartClick');
   // const [newValue,setNewValue] = useState()
   function handleClick() {
-    addToCartClick.style.display = 'block';
-    setTimeout(() => {
-      addToCartClick.style.display = 'none';
-    }, 2000);
+    if(product !== null){
+      addToCartClick.style.display = 'block';
+      setTimeout(() => {
+        addToCartClick.style.display = 'none';
+      }, 1000);
 
-    dispatch(addToCart(product, 1)); 
+      dispatch(addToCart(product, 1)); 
+    }
+ 
   }
   return (
     <>

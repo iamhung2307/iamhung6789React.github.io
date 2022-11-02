@@ -7,7 +7,7 @@ function AddToCartButton({ products, quantity = 1 }) {
   const dispatch = useDispatch();
   const addToCartClick = document.querySelector('.addToCartClick');
   function handleClick() {
-    console.log(size == null)
+    // console.log(size == null)
     if(size == null){
       document.querySelector('.textChooseSize').style.display = 'block'
     }else{
@@ -15,7 +15,7 @@ function AddToCartButton({ products, quantity = 1 }) {
       addToCartClick.style.display = 'block';
       setTimeout(() => {
         addToCartClick.style.display = 'none';
-      }, 2000);
+      }, 1000);
 
       dispatch(addToCart(products, quantity,size));
     }
